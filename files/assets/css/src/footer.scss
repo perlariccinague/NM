@@ -1,0 +1,135 @@
+@import "variables";
+
+#footer {
+  background: $yellow;
+  margin-top: 150px;
+  .inside {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    .ce_text {
+      p {
+        color: white;
+        font-weight: bold;
+        a{
+          color: white;
+          text-decoration: none;
+          transition: color 250ms;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  border-bottom-style: dotted;
+  padding-bottom: 15px;
+  .footer-top-left {
+    width: 70%;
+    margin-top: 50px;
+    .footer-logo {
+      width: 30%;
+      img {
+        width: 155px;
+      }
+    }
+  }
+}
+
+.footer-top-right {
+  width: 30%;
+  margin-top: 155px;
+  #footer-nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      li a {
+        text-decoration: none;
+        color: white;
+        transition: color 250ms;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+#footer-nav li.active {
+  color: white;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  .footer-bottom-left {
+    width: 85%;
+    margin-top: 15px;
+    .ce_text {
+      font-size: 12px;
+      h4 {
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.1em;
+
+      }
+    }
+  }
+  .footer-bottom-right {
+    width: 15%;
+    margin-top: 54px;
+      img {
+        width: 180px;
+    }
+  }
+}
+
+.slogan-teaser {
+  background: black;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0px 8px;
+}
+
+@media screen and (max-width: 760px) {
+  #footer {
+    margin-top: 100px;
+  }
+
+  .footer-top .footer-top-left .footer-logo {
+    width: 50%;
+  }
+  .footer-top-right {
+    margin-top: 100px;
+    #footer-nav ul {
+      display: block;
+    }
+  }
+
+  .footer-bottom {
+    .footer-bottom-left {
+     width: 70%;
+   }
+     .ce_text {
+      font-size: 14px;
+    }
+    .footer-bottom-right {
+      width: 30%;
+    }
+  }
+}

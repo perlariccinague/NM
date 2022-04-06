@@ -1,0 +1,17 @@
+@import "footer";
+@import "header";
+@import "main";
+@import "slider";
+@import "menu";
+@import "form";
+@import "form-header";
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

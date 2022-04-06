@@ -1,0 +1,168 @@
+@import "variables";
+
+.header-image {
+  position: relative;
+  height: auto;
+  img {
+    width: 100%;
+  }
+}
+
+#header {
+  background: url("/files/assets/bilder/header2-5.jpg") 0/cover;
+  height: 75vh;
+  .inside {
+    background-color: rgba(248,168,0,0.8);
+    height: 20vh;
+  }
+}
+
+.header-banner-top, .header-banner-bottom {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo, #header-nav {
+  margin-top: 53px;
+  img {
+    width: 170px;
+  }
+}
+
+#header-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  z-index: 50;
+  text-transform: uppercase;
+  font-size: 16px;
+  li {
+    border-left: 2px solid white;
+    padding-left: 6px;
+    margin-left: 6px;
+    a {
+      color: white;
+      text-decoration: none;
+      transition: filter 250ms;
+      &:hover {
+        filter: invert(1);
+      }
+    }
+    &.active {
+      color: white;
+    }
+  }
+}
+
+.logo-slogan {
+  margin-top: -24px;
+  margin-left: -44px;
+  img {
+    width: 200px;
+  }
+}
+
+.header-banner-bottom-right {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -95px;
+  position: relative;
+}
+
+.mobile_menu_trigger {
+  img {
+    width: 50px;
+    filter: invert(1);
+  }
+}
+
+#form-search {
+  position: relative;
+}
+
+/*#form-search input.text {
+  visibility: hidden;
+}
+
+input.search_input {
+  width: 85%;
+  height: 40px;
+  cursor: pointer;
+  background: $gray;
+  outline: none;
+  box-sizing: border-box;
+  border: 0;
+  visibility: hidden;
+}
+
+#form-search input.submit {
+  position: absolute;
+  width: 35px;
+  z-index: 50;
+  cursor: pointer;
+  right: 34px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  filter: invert(1);
+}
+
+#form-search .submit:focus-visible {
+  border: 1px solid black;
+
+}*/
+
+@media screen and (max-width: 760px) {
+#header {
+  background: url("/files/assets/bilder/Header-Mobile.jpg") 0/cover;
+  height: 75vh;
+  .inside {
+    height: 25vh;
+  }
+}
+
+  .header-logo  {
+    margin-top: 27px;
+    img {
+      width: 100px;
+    }
+  }
+
+  #header-nav {
+    display: none;
+  }
+
+  .logo-slogan {
+    margin-top: -8px;
+    margin-left: -27px;
+    img {
+      width: 136px;
+    }
+  }
+
+  .header-banner-bottom-right {
+    margin-top: -102px;
+    margin-right: -5px;
+  }
+
+  /*#form-search input.submit {
+    width: 28px;
+    max-width: initial;
+    top: 3px;
+    right: 25px;
+  }*/
+
+  .header-banner-bottom .mobile_menu_trigger {
+    cursor: pointer;
+    img {
+      width: 38px;
+      max-width: initial;
+      height: 35px;
+    }
+  }
+}

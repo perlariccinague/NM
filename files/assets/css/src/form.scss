@@ -1,0 +1,103 @@
+@import "variables";
+
+.contact-form {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.contact-form .formbody .widget-text,
+.contact-form .formbody .widget-textarea,
+.contact-form .formbody .widget-checkbox{
+  margin: 15px 0;
+}
+
+.contact-form .formbody input[name="Name"],
+.contact-form .formbody textarea[name="Nachricht"],
+.contact-form .formbody input[name="E-Mail"],
+.contact-form .formbody input[name="Telefon"]{
+  background-color: black;
+  border: 0px;
+  color: white;
+  width: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 5px;
+  outline: none;
+}
+
+fieldset {
+  border: 0;
+  margin: 0px -11px;
+}
+
+.contact-form .formbody input[type="checkbox"] {
+  display: none;
+}
+
+.contact-form .formbody input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: -2px 8px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid $yellow;
+  border-radius: 4px;
+}
+
+#lbl_7_0 {
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-style: italic
+}
+
+button.contact-button {
+  cursor: pointer;
+  color: black;
+  background: transparent;
+  border: 1px solid $yellow;
+  padding: 6px 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: background-color 250ms;
+  &:hover {
+    background-color: $yellow;
+  }
+}
+
+.formular-verschickt {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $max-width;
+  line-height: 1.4em;
+  h2 {
+    text-align: center;
+    color: #f8a800;
+    margin: 30px 0;
+    border-bottom-style: dotted;
+    padding-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.6em;
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background: $yellow;
+    transition: filter 250ms;
+    border-radius: 7px;
+    padding: 9px 20px;
+    text-transform: uppercase;
+    &:hover {
+     filter: brightness(1.2);
+    }
+   }
+  }
+}

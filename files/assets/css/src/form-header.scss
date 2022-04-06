@@ -1,0 +1,120 @@
+@import "variables";
+
+#form-search {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+input.search_input {
+  height: 40px;
+  width: 0px;
+  border-style: none;
+  padding: 1px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  padding-right: 55px;
+  color:#fff;
+  margin-right: 8px;
+  background: transparent;
+}
+
+input.search_input::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 67px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;
+  z-index: 50;
+  filter: invert(1);
+  top: -3px;
+}
+
+.btn-search:focus {
+  display: none;
+}
+
+.search > input {
+  display: none;
+}
+.search {
+  width: 40px;
+}
+
+.ce_form:focus .search_input input {
+  width: 300px;
+}
+
+.btn-search:focus  ~ .ce_form .search >input{
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  right: 20px;
+  top: -5px;
+  display: block;
+}
+
+.btn-search:focus ~ .ce_form .search_input > input {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:3px solid rgb(255,255,255);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+
+}
+
+.search_input:focus ~ .widget-submit input {
+  display: block;
+}
+
+input.search_input:focus {
+  width: auto;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:3px solid rgb(255,255,255);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+@media screen and (max-width: 760px) {
+  .btn-search {
+    width: 38px;
+    right: 55px;
+  }
+
+  .btn-search:focus ~ .ce_form .search_input > input {
+    width: 115px;
+  }
+
+  #form-search input.submit {
+    width: 27px;
+  }
+
+  input.search_input:focus {
+    width: 115px;
+  }
+  .btn-search:focus  ~ .ce_form .search >input {
+    right: 10px;
+  }
+}
+
