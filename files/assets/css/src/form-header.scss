@@ -16,10 +16,11 @@ input.search_input {
   outline: none;
   border-radius: 25px;
   transition: all .5s ease-in-out;
-  padding-right: 55px;
+  padding-right: 20px;
   color:#fff;
   margin-right: 8px;
   background: transparent;
+
 }
 
 input.search_input::placeholder {
@@ -30,22 +31,23 @@ input.search_input::placeholder {
 }
 
 .btn-search{
-  width: 50px;
-  height: 50px;
+  width: 41px;
+  height: 38px;
   border-style: none;
   font-size: 20px;
   font-weight: bold;
   outline: none;
   cursor: pointer;
   border-radius: 50%;
-  position: absolute;
-  right: 67px;
   color:#ffffff ;
   background-color:transparent;
   pointer-events: painted;
   z-index: 50;
   filter: invert(1);
-  top: -3px;
+  transition: filter 250ms;
+  &:hover {
+    filter: invert(0);
+  }
 }
 
 .btn-search:focus {
@@ -57,10 +59,12 @@ input.search_input::placeholder {
 }
 .search {
   width: 40px;
+  height: 60px;
+
 }
 
 .ce_form:focus .search_input input {
-  width: 300px;
+  width: 200px;
 }
 
 .btn-search:focus  ~ .ce_form .search >input{
@@ -69,13 +73,14 @@ input.search_input::placeholder {
   position: absolute;
   cursor: pointer;
   outline: none;
-  right: 20px;
-  top: -5px;
+  right: 0;
+  top: -8px;
   display: block;
+  filter: invert(1);
 }
 
 .btn-search:focus ~ .ce_form .search_input > input {
-  width: 300px;
+  width: 200px;
   border-radius: 0px;
   background-color: transparent;
   border-bottom:3px solid rgb(255,255,255);
@@ -88,33 +93,52 @@ input.search_input::placeholder {
 }
 
 input.search_input:focus {
-  width: auto;
+  width: 200px;
   border-radius: 0px;
   background-color: transparent;
   border-bottom:3px solid rgb(255,255,255);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 
+.mod_search.block {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.mod_search input.text, .mod_search .submit  {
+  display: none;
+}
+
+.mod_search .header, .mod_search .first.last.even  {
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+.mod_search .first.last.even {
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-weight: normal;
+    transition: color 250ms;
+    cursor: pointer;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
 
 @media screen and (max-width: 760px) {
-  .btn-search {
-    width: 38px;
-    right: 55px;
-  }
 
   .btn-search:focus ~ .ce_form .search_input > input {
-    width: 115px;
+    width: 120px;
   }
-
   #form-search input.submit {
     width: 27px;
   }
-
   input.search_input:focus {
-    width: 115px;
+    width: 120px;
   }
-  .btn-search:focus  ~ .ce_form .search >input {
-    right: 10px;
-  }
+
 }
 

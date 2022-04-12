@@ -5,7 +5,8 @@
   max-width: 1000px;
   margin: 50px auto;
   .news {
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     transition: filter 250ms;
     img {
       height: 228px;
@@ -25,17 +26,17 @@
     h2 {
       line-height: 1.4em;
       font-weight: bold;
-      .h2-span {
+      font-size: 20px;
+      .h2-span,  .h2-span1 {
         padding: 0 7px;
-        top: 185px;
         position: absolute;
         background: black;
       }
       .h2-span1 {
         top: 219px;
-        position: absolute;
-        background: black;
-        padding: 0 7px;
+      }
+      .h2-span {
+        top: 185px;
       }
     }
     p {
@@ -62,7 +63,7 @@
 
 .mod_rocksolid_slider .rsts-prev {
   right: initial;
-  left: -50px;
+  left: -13px;
   background: url("/files/assets/layout/arrow-left-white.svg") no-repeat;
 }
 
@@ -79,7 +80,7 @@
   box-shadow: none;
   border-radius:0;
   height: 50px;
-  background-size: 48px !important;
+  background-size: 30px !important;
   width: 50px;
   transition: filter 250ms;
   &:hover {
@@ -100,7 +101,7 @@
   p, .more a{
     color: black;
   }
-  .news, .more a {
+  .more a {
     transition: color 250ms;
     &:hover {
       color: $yellow;
@@ -166,6 +167,7 @@
 
   .mod_rocksolid_slider .news {
     width: 100%;
+    margin: 0 auto;
   }
 
   .slider-news .slider-control, .ce_sliderStart .slider-control {
