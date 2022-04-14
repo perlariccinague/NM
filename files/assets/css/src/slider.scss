@@ -23,6 +23,7 @@
   }
   .ce_text {
     color: #fff;
+    margin-top: -25px;
     h2 {
       line-height: 1.4em;
       font-weight: bold;
@@ -40,21 +41,23 @@
       }
     }
     p {
-      margin-top: -50px;
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
 
-.news .more a {
+.news .more{
+  margin-top: 0;
+  a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     transition: color 250ms;
     &:hover {
       color: $gray;
     }
+  }
 }
 
 .rsts-skin-default, .rsts-default {
