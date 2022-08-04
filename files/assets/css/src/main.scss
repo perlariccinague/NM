@@ -79,7 +79,6 @@
 }
 
 .paragraph {
-  width: 90%;
   max-width: 1000px;
   margin: 0 118px;
   font-size: 20px;
@@ -143,6 +142,10 @@
   .kontakt-image {
     img {
       width: 216px;
+      transition: transform 250ms ease-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
    }
     .kontakt-image-scan img {
@@ -297,7 +300,7 @@
 
   .paragraph {
     margin: 0 50px;
-    font-size: 13px;
+    font-size: 17px;
   }
 
   .image-container > figure {
