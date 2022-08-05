@@ -1,0 +1,48 @@
+<section class="<?php echo $this->class ?> block"<?php echo $this->cssID ?>>
+
+
+</section>
+
+<div class="Product">
+    <div class="product_description">
+        <h2> <?= $this->product_title  ?></h2>
+        <p> <?= $this->description  ?></p>
+    </div>
+    <div class="product_items">
+        <div class="item_left">
+            <?php if($this->provider_passwort != ""): ?>
+              <p><strong>Getreideart</strong> <?= $this->cereal_type  ?></p>
+            <?php endif; ?>
+            <p><span>Dosierung</span> <?= $this->dosage  ?>%</p>
+            <p><span>Geruch Geschmack </span><span class="star"><?= $this->smell  ?></span></p>
+            <p><span>Frischhaltung</span><span class="star"><?= $this->frische  ?></span></p>
+            <p><span>Backvolumen</span><span class="star"><?= $this->volume  ?></span></p>
+            <p><span>Enzymaktivität (DK)</span><span class="star"><?= $this->dk  ?></span></p>
+            <p><span>Bio</span> <?= $this->bio  ?></p>
+            <p><span>Brötchen Weizenbrot hell </span><span class="star"><?= $this->light_bun  ?></span></p>
+            <p><span>Spezial/Körnerbrötchen</span><span class="star"><?= $this->special_bun  ?></span></p>
+            <p><span>Weizenmischbrot </span><span class="star"><?= $this->wheat_bread  ?></span></p>
+            <p><span>Roggenmischbrot</span><span class="star"><?= $this->rye_bread  ?></span></p>
+            <p><span>Spezial/Körnerbrot</span><span class="star"><?= $this->grain_bread  ?></span></p>
+            <p><span>Dekor geeignet </span><span class="star"><?= $this->decor  ?></span></p>
+            <p><span>Aromen</span> <?= $this->aromas  ?></p>
+        </div>
+        <div class="item_middle">
+            <p><strong>EBC</strong> <?= $this->ebc  ?></p>
+        </div>
+        <div class="item_right">
+            <p><strong>EBC</strong> <?= $this->ebc  ?></p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
