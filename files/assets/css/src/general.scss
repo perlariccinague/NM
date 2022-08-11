@@ -7,6 +7,18 @@
 @import "form-header";
 @import "product";
 
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Medium.ttf") format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Black.ttf") format('truetype');
+  font-weight: bold;
+}
+
 body {
   font-family:"Barlow Condensed", sans-serif;
 }

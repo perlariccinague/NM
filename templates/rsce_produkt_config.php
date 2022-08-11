@@ -12,129 +12,165 @@ return array(
     ),
     'fields' => array(
         'product_title' => array(
-            'label' => array('Produkt Name', 'Beschreibung...'),
-            'inputType' => 'text',
+            'label' => array('Produkt Name'),
+            'inputType' => 'text'
         ),
         'description' => array(
-            'label' => array('Beschreibung', 'Beschreibung...'),
+            'label' => array('Beschreibung'),
             'eval' => array('rte' => 'tinyMCE'),
             'inputType' => 'textarea',
         ),
         'dk' => array(
-            'label' => array('DK', 'Beschreibung...'),
+            'label' => array('DK'),
             'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
         ),
         'cereal type' => array(
-            'label' => array('Getreideart', 'Beschreibung...'),
-            'inputType' => 'text',
+            'label' => array('Getreideart'),
+            'inputType' => 'select',
+          'options' => array(
+            'Weizen',
+            'Roggen',
+            'Gerste',
+            'Dinkel'
+          ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'dosage' => array(
-            'label' => array('Dosierung %', 'Beschreibung...'),
+            'label' => array('Dosierung %'),
             'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
         ),
         'bio' => array(
-            'label' => array('Bio ', 'Beschreibung...'),
+            'label' => array('Bio '),
             'inputType' => 'select',
             'options' => array(
                 'ja',
                 'Nein'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'smell' => array(
-            'label' => array('Geruch Geschmack ', 'Beschreibung...'),
+            'label' => array('Geruch Geschmack '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'frische' => array(
-            'label' => array('Frischhaltung ', 'Beschreibung...'),
+            'label' => array('Frischhaltung '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'volume' => array(
-            'label' => array('Backvolumen ', 'Beschreibung...'),
+            'label' => array('Backvolumen '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'light_bun' => array(
-            'label' => array('Brötchen Weizenbrot hell ', 'Beschreibung...'),
+            'label' => array('Brötchen Weizenbrot hell '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'special_bun' => array(
-            'label' => array('Spezial/Körnerbrötchen', 'Beschreibung...'),
+            'label' => array('Spezial/Körnerbrötchen'),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'wheat_bread' => array(
-            'label' => array('Weizenmischbrot ', 'Beschreibung...'),
+            'label' => array('Weizenmischbrot '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'rye_bread' => array(
-            'label' => array('Roggenmischbrot', 'Beschreibung...'),
+            'label' => array('Roggenmischbrot'),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'grain_bread' => array(
-            'label' => array('Spezial/Körnerbrot ', 'Beschreibung...'),
+            'label' => array('Spezial/Körnerbrot '),
             'inputType' => 'select',
             'options' => array(
                 '0',
                 '*',
                 '**',
                 '***'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'decor' => array(
-            'label' => array('Dekor geeignet ', 'Beschreibung...'),
+            'label' => array('Dekor geeignet '),
             'inputType' => 'select',
             'options' => array(
                 'ja',
                 'Nein'
-            )
+            ),
+          'eval' => Array('tl_class' => 'w50')
         ),
         'aromas' => array(
-            'label' => array('Aromen', 'Beschreibung...'),
+            'label' => array('Aromen'),
             'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
         ),
         'ebc' => array(
-            'label' => array('EBC', 'Beschreibung...'),
+            'label' => array('EBC'),
             'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
+        ),
+        'lab_pce_l' => array(
+            'label' => array('LAB PCE: L'),
+            'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
+        ),
+        'lab_pce_a' => array(
+            'label' => array('LAB PCE: A'),
+            'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
+        ),
+        'lab_pce_b' => array(
+            'label' => array('LAB PCE: B'),
+            'inputType' => 'text',
+          'eval' => Array('tl_class' => 'w50')
         ),
 
 

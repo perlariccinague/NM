@@ -1,17 +1,36 @@
-<section class="<?php echo $this->class ?> block"<?php echo $this->cssID ?>>
-
-
-</section>
+<?php
+    $ebc = $this->ebc;
+    $ebcPercentage = $ebc/1600;
+    $ebcWhiteText = false;
+    $pceLBlackText = false;
+    if($ebcPercentage >= 0.6) {
+      $ebcWhiteText = true;
+    }
+    $pceL = $this->lab_pce_l;
+    echo $pceL;
+    $pceLBase = $pceL - 23.4;
+    $pceLPercentage = $pceLBase/59.9;
+    echo $pceLPercentage;
+    if($pceLPercentage >= 0.6) {
+        $pceLBlackText = true;
+    }
+    $pceA = $this->lab_pce_a;
+    $pceABase = $pceA - 3.7;
+    $pceAPercentage = $pceABase/10;
+    $pceB = $this->lab_pce_b;
+    $pceBBase = $pceB - 10.2;
+    $pceBPercentage = $pceBBase/27.7;
+?>
 
 <div class="Product">
     <div class="product_description">
         <h2> <?= $this->product_title  ?></h2>
-        <p> <?= $this->description  ?></p>
+       <?= $this->description  ?>
     </div>
     <div class="product_items">
         <div class="item_left">
-            <?php if($this->provider_passwort != ""): ?>
-              <p><strong>Getreideart</strong> <?= $this->cereal_type  ?></p>
+            <?php if($this->cereal_type !== ""): ?>
+              <p><strong>Getreideart</strong> <?= $this->cereal_type ?></p>
             <?php endif; ?>
             <p><span>Dosierung</span> <?= $this->dosage  ?>%</p>
             <p><span>Geruch Geschmack </span><span class="star"><?= $this->smell  ?></span></p>
@@ -28,21 +47,25 @@
             <p><span>Aromen</span> <?= $this->aromas  ?></p>
         </div>
         <div class="item_middle">
-            <p><strong>EBC</strong> <?= $this->ebc  ?></p>
+            <p><strong>EBC</strong></p>
+            <div class="ebc" <?php if($ebcWhiteText):?> style="color:transparent"<?php endif;?>><?= $this->ebc ?>
+                <div class="ebc-layover" style="opacity:<?= $ebcPercentage ?>"><?php if($ebcWhiteText):?><?= $this->ebc ?><?php endif;?></div>
+            </div>
         </div>
         <div class="item_right">
-            <p><strong>EBC</strong> <?= $this->ebc  ?></p>
+            <p><strong>LAB PCE</strong></p>
+            <div class="pce">
+                <div class="lab pce_l" <?php if($pceLBlackText): ?> style="color:transparent"<?php endif; ?>><?= $this->lab_pce_l ?>
+                    <div class="pce_l_layover layover" style="opacity:<?= $pceLPercentage ?>"><?php if($pceLBlackText): ?><?= $this->lab_pce_l ?><?php endif; ?></div>
+                </div>
+                <div class="lab pce_a"><?= $this->lab_pce_a ?>
+                    <div class="pce_a_layover layover" style="opacity:<?= $pceAPercentage ?>"><?= $this->lab_pce_a ?></div>
+                </div>
+                <div class="lab pce_b"><?= $this->lab_pce_b ?>
+                    <div class="pce_b_layover layover" style="opacity:<?= $pceBPercentage ?>"><?= $this->lab_pce_b ?></div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
