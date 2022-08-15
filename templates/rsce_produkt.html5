@@ -7,10 +7,10 @@
       $ebcWhiteText = true;
     }
     $pceL = $this->lab_pce_l;
-    echo $pceL;
+
     $pceLBase = $pceL - 23.4;
     $pceLPercentage = $pceLBase/59.9;
-    echo $pceLPercentage;
+
     if($pceLPercentage >= 0.6) {
         $pceLBlackText = true;
     }
@@ -20,9 +20,10 @@
     $pceB = $this->lab_pce_b;
     $pceBBase = $pceB - 10.2;
     $pceBPercentage = $pceBBase/27.7;
+
 ?>
 
-<div class="Product">
+<div class="product" id="<?= $this->id ?>">
     <div class="product_description">
         <h2> <?= $this->product_title  ?></h2>
        <?= $this->description  ?>
@@ -69,3 +70,35 @@
     </div>
 
 </div>
+
+<script>
+
+    const product = {
+        id: <?= $this->id ?>,
+        cerealType: '<?= $this->cereal_type ?>',
+        dosage: '<?= $this->dosage ?>',
+        smell: '<?= $this->smell ?>',
+        frische: '<?= $this->frische ?>',
+        volume: '<?= $this->volume ?>',
+        dk: '<?= $this->dk ?>',
+        bio: '<?= $this->bio ?>',
+        light_bun: '<?= $this->light_bun ?>',
+        special_bun: '<?= $this->special_bun ?>',
+        wheat_bread: '<?= $this->wheat_bread ?>',
+        rye_bread: '<?= $this->rye_bread ?>',
+        grain_bread: '<?= $this->grain_bread ?>',
+        decor: '<?= $this->decor ?>',
+        aromas: '<?= $this->aromas ?>',
+        ebc: '<?= $this->ebc ?>',
+        lab_pce_l: '<?= $this->lab_pce_l ?>',
+        lab_pce_a: '<?= $this->lab_pce_a ?>',
+        lab_pce_b: '<?= $this->lab_pce_b ?>'
+
+
+
+    }
+    allProducts.push(product);
+
+
+</script>
+

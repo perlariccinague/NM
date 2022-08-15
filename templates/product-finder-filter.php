@@ -12,6 +12,7 @@
                 <li>Weizenmischbrot</li>
                 <li>Mischbrot</li>
                 <li>Körnerbrot</li>
+                <li>Bio</li>
             </ul>
         </div>
         <div class="filter-bottom-middle">
@@ -34,3 +35,7 @@
         </div>
     </div>
 </div>
+
+<script>
+    let allProducts = [];
+</script>

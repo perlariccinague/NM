@@ -4,7 +4,7 @@
   padding-top: 50px;
 }
 
-.Product {
+.product {
   width: 90%;
   max-width: $max-width ;
   margin: 0 auto;
@@ -165,14 +165,16 @@
             cursor: pointer;
             &:before {
               position: absolute;
-              content: '';
-              top: 3px;
+              content: "8";
+              font-family: "Weimar",sans-serif;
+              top: 0;
               left: 0;
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: 2px solid white;
-              background: transparent;
+              font-size: 17px;
+            }
+            &.li-checked {
+              &:before {
+                content: '9';
+              }
             }
           }
         }
