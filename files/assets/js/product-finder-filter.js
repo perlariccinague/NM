@@ -26,7 +26,7 @@ function filter () {
         allProducts.forEach(product => {
             if(product.bio) {
                // allProducts.style.display = ''
-                const filterProduct = document.('.product');
+                const filterProduct = document.querySelectorAll('.product');
                 filterProduct.forEach(text => {
                     console.log(text);
                     if(text.innerHTML === 'Bio'){
