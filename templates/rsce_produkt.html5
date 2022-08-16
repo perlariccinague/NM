@@ -26,7 +26,12 @@
 <div class="product" id="<?= $this->id ?>">
     <div class="product_description">
         <h2> <?= $this->product_title  ?></h2>
-       <?= $this->description  ?>
+        <div class="product_description_block">
+            <?= $this->description  ?>
+            <img src="/files/assets/layout/Brot.svg" alt="">
+            <span><a href=""><?= $this->file  ?></a><strong>DOWNLOAD Datenblatt</strong></span>
+        </div>
+
     </div>
     <div class="product_items">
         <div class="item_left">
@@ -73,7 +78,7 @@
 
 <script>
 
-    const product = {
+     product = {
         id: <?= $this->id ?>,
         cerealType: '<?= $this->cereal_type ?>',
         dosage: '<?= $this->dosage ?>',

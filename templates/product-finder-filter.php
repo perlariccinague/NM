@@ -12,7 +12,7 @@
                 <li>Weizenmischbrot</li>
                 <li>Mischbrot</li>
                 <li>Körnerbrot</li>
-                <li>Bio</li>
+                <li id="bio">Bio</li>
             </ul>
         </div>
         <div class="filter-bottom-middle">
@@ -34,8 +34,13 @@
             </ul>
         </div>
     </div>
+
+    <button type="submit" class="submit" value="Filter">Filtern</button>
 </div>
 
 <script>
     let allProducts = [];
+    let product = {
+
+    };
 </script>

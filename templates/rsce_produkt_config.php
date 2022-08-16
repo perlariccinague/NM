@@ -43,11 +43,7 @@ return array(
         ),
         'bio' => array(
             'label' => array('Bio '),
-            'inputType' => 'select',
-            'options' => array(
-                'ja',
-                'Nein'
-            ),
+            'inputType' => 'checkbox',
           'eval' => Array('tl_class' => 'w50')
         ),
         'smell' => array(
@@ -140,11 +136,7 @@ return array(
         ),
         'decor' => array(
             'label' => array('Dekor geeignet '),
-            'inputType' => 'select',
-            'options' => array(
-                'ja',
-                'Nein'
-            ),
+            'inputType' => 'checkbox',
           'eval' => Array('tl_class' => 'w50')
         ),
         'aromas' => array(
@@ -172,8 +164,19 @@ return array(
             'inputType' => 'text',
           'eval' => Array('tl_class' => 'w50')
         ),
+        'file' => array(
+            'label' => array('DOWNLOAD', ''),
+            'inputType' => 'fileTree',
+            'eval' => array(
+                'fieldType' => 'checkbox',
+                'filesOnly' => true,
+                'isDownloads'=> true,
+                'extensions' => 'pdf',
+               'tl_class' => 'clr'
 
+            ),
 
+        ),
 
     ),
 );
