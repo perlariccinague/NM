@@ -7,12 +7,15 @@
         <div class="filter-bottom-left">
             <h3>Geeignet für</h3>
             <ul>
-                <li>Brötchen/Weizenbrot</li>
+                <li>Brötchen/Weizenbrot Hell</li>
                 <li>Körnerbrötchen</li>
                 <li>Weizenmischbrot</li>
                 <li>Mischbrot</li>
                 <li>Körnerbrot</li>
                 <li id="bio">Bio</li>
+                <li id="decor">Dekor</li>
+                <li id="dosage">Dosierung<input id="dosierung" type="number" value ="" min="0" max="100"></li>
+                <li id="dk">DK<input id="dk_field" type="number" value =""></li>
             </ul>
         </div>
         <div class="filter-bottom-middle">

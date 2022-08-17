@@ -35,21 +35,33 @@
     </div>
     <div class="product_items">
         <div class="item_left">
-            <?php if($this->cereal_type !== ""): ?>
-              <p><strong>Getreideart</strong> <?= $this->cereal_type ?></p>
+            <?php if($this->cerealType != ""): ?>
+              <p><span>Getreideart</span> <?= $this->cerealType ?></p>
             <?php endif; ?>
-            <p><span>Dosierung</span> <?= $this->dosage  ?>%</p>
+            <p><span>Dosierung</span> Von <?= $this->dosageFrom  ?> Bis <?= $this->dosageTo  ?>%</p>
             <p><span>Geruch Geschmack </span><span class="star"><?= $this->smell  ?></span></p>
             <p><span>Frischhaltung</span><span class="star"><?= $this->frische  ?></span></p>
             <p><span>Backvolumen</span><span class="star"><?= $this->volume  ?></span></p>
             <p><span>Enzymaktivität (DK)</span><span class="star"><?= $this->dk  ?></span></p>
-            <p><span>Bio</span> <?= $this->bio  ?></p>
+            <p><span>Bio</span>
+                <?php if($this->bio): ?>
+                  <?= "ja"?>
+                <?php else: ?>
+                  <?= "Nein"?>
+                <?php endif; ?>
+            </p>
             <p><span>Brötchen Weizenbrot hell </span><span class="star"><?= $this->light_bun  ?></span></p>
             <p><span>Spezial/Körnerbrötchen</span><span class="star"><?= $this->special_bun  ?></span></p>
             <p><span>Weizenmischbrot </span><span class="star"><?= $this->wheat_bread  ?></span></p>
             <p><span>Roggenmischbrot</span><span class="star"><?= $this->rye_bread  ?></span></p>
             <p><span>Spezial/Körnerbrot</span><span class="star"><?= $this->grain_bread  ?></span></p>
-            <p><span>Dekor geeignet </span><span class="star"><?= $this->decor  ?></span></p>
+            <p><span>Dekor geeignet </span>
+                <?php if($this->decor): ?>
+                    <?= "ja"?>
+                <?php else: ?>
+                    <?= "Nein"?>
+                <?php endif; ?>
+            </p>
             <p><span>Aromen</span> <?= $this->aromas  ?></p>
         </div>
         <div class="item_middle">
@@ -81,8 +93,9 @@
      product = {
         id: <?= $this->id ?>,
         cerealType: '<?= $this->cereal_type ?>',
-        dosage: '<?= $this->dosage ?>',
-        smell: '<?= $this->smell ?>',
+        dosageFrom: '<?= $this->dosageFrom ?>',
+        dosageTo: '<?= $this->dosageTo ?>',
+         smell: '<?= $this->smell ?>',
         frische: '<?= $this->frische ?>',
         volume: '<?= $this->volume ?>',
         dk: '<?= $this->dk ?>',

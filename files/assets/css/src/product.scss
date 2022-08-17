@@ -8,8 +8,6 @@
   width: 90%;
   max-width: $max-width ;
   margin: 0 auto;
-  border-bottom-style: dotted;
-  padding-bottom: 15px;
 }
 
 .product_description {
@@ -34,6 +32,9 @@
 .product_items {
   display: flex;
   justify-content: space-between;
+  border-bottom-style: dotted;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
   .item_left {
     width: 60%;
     text-transform: uppercase;
@@ -215,6 +216,10 @@
       font-size: 15px;
     }
   }
+}
+
+#filter input {
+  margin: 0 3px;
 }
 
 @media screen and (max-width: 760px) {

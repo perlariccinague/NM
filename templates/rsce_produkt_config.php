@@ -25,7 +25,7 @@ return array(
             'inputType' => 'text',
           'eval' => Array('tl_class' => 'w50')
         ),
-        'cereal type' => array(
+        'cerealType' => array(
             'label' => array('Getreideart'),
             'inputType' => 'select',
           'options' => array(
@@ -36,16 +36,23 @@ return array(
           ),
           'eval' => Array('tl_class' => 'w50')
         ),
-        'dosage' => array(
-            'label' => array('Dosierung %'),
+        'dosageFrom' => array(
+            'label' => array('Dosierung von %'),
             'inputType' => 'text',
           'eval' => Array('tl_class' => 'w50')
+        ),
+        'dosageTo' => array(
+            'label' => array('Dosierung Bis %'),
+            'inputType' => 'text',
+            'eval' => Array('tl_class' => 'w50')
         ),
         'bio' => array(
             'label' => array('Bio '),
             'inputType' => 'checkbox',
-          'eval' => Array('tl_class' => 'w50')
+            'eval' => Array('tl_class' => 'w50'),
+
         ),
+        'eval' => Array('tl_class' => 'w50'),
         'smell' => array(
             'label' => array('Geruch Geschmack '),
             'inputType' => 'select',
