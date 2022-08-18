@@ -57,10 +57,10 @@ return array(
             'label' => array('Geruch Geschmack '),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -68,21 +68,21 @@ return array(
             'label' => array('Frischhaltung '),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
         'volume' => array(
-            'label' => array('Backvolumen '),
+            'label' => array('Backvolumen'),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -90,10 +90,10 @@ return array(
             'label' => array('Brötchen Weizenbrot hell '),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -101,10 +101,10 @@ return array(
             'label' => array('Spezial/Körnerbrötchen'),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -112,10 +112,10 @@ return array(
             'label' => array('Weizenmischbrot '),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -123,10 +123,10 @@ return array(
             'label' => array('Roggenmischbrot'),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
@@ -134,10 +134,10 @@ return array(
             'label' => array('Spezial/Körnerbrot '),
             'inputType' => 'select',
             'options' => array(
-                '0',
-                '*',
-                '**',
-                '***'
+                'nicht geeignet' => '0',
+                'wenig geeignet' => '*',
+                'geeignet' => '**',
+                'gut geeignet' => '***',
             ),
           'eval' => Array('tl_class' => 'w50')
         ),
