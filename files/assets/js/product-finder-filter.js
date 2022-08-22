@@ -15,24 +15,57 @@ const btn = document.querySelector(".submit");
 btn.addEventListener("click", filterNew);
 const productList = document.querySelector('#product-finder-article');
 
-const dosage = document.querySelector('#dosage');
+//const dosage = document.querySelector('#dosage');
 
 productList.style.display = 'none';
 
 const allFilterElements = document.querySelectorAll('#filter li');
+//const cerealType = document.querySelectorAll('.cereal');
 
 function filterNew() {
     productList.style.display = '';
     allProducts.forEach(product => {
         document.getElementById(product.id).style.display = '';
         allFilterElements.forEach(element => {
-            console.log(element.classList.contains('li-checked'));
+           // console.log(element.classList.contains('li-checked'));
             console.log(product[element.id]);
             if(element.classList.contains('li-checked') && !product[element.id]) {
                 document.getElementById(product.id).style.display = 'none';
             }
         })
     })
+    /*cerealType.forEach(text =>{
+        let type = text.textContent
+        console.log(type);
+        if(text.classList.contains('li-checked')) {
+            allProducts.forEach(product => {
+                if(product.cerealType === 'Gerste') {
+                    document.getElementById(product.id).style.display = '';
+                    productList.style.display = '';
+                    console.log(product.id)
+                }
+                else if(product.cerealType === 'Roggen') {
+                    document.getElementById(product.id).style.display = '';
+                    productList.style.display = '';
+                    console.log(product.id)
+                }
+                else if(product.cerealType === 'Weizen') {
+                    document.getElementById(product.id).style.display = '';
+                    productList.style.display = '';
+                    console.log(product.id)
+                }
+                else if(product.cerealType === 'Dinkel') {
+                    document.getElementById(product.id).style.display = '';
+                    productList.style.display = '';
+                    console.log(product.id)
+                }
+                else {
+                    document.getElementById(product.id).style.display = 'none';
+                }
+            });
+        }
+    })*/
+
 }
 
 document.querySelector('#dosierung').addEventListener('input', inputValue);
@@ -69,3 +102,6 @@ function inputValue() {
         });
     }
 }
+
+
+

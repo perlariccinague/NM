@@ -7,11 +7,11 @@
         <div class="filter-bottom-left">
             <h3>Geeignet für</h3>
             <ul>
-                <li id="hellBrot">Brötchen/Weizenbrot Hell</li>
-                <li id="spezialBrot">Körnerbrötchen</li>
-                <li id="wheatMixBread">Weizenmischbrot</li>
-                <li id="mixBread">Roggenmischbrot</li>
-                <li id="grainBread">Körnerbrot</li>
+                <li id="light_bun">Brötchen/Weizenbrot Hell</li>
+                <li id="special_bun">Körnerbrötchen</li>
+                <li id="wheat_bread">Weizenmischbrot</li>
+                <li id="rye_bread">Roggenmischbrot</li>
+                <li id="grain_bread">Körnerbrot</li>
                 <li id="bio">Bio</li>
                 <li id="decor">Dekor</li>
                 <li id="dosage">Dosierung<input id="dosierung" type="number" value ="" min="0" max="100"></li>
@@ -24,10 +24,10 @@
         <div class="filter-bottom-middle">
             <h3>Getreidesorte</h3>
             <ul>
-                <li>Weizen</li>
-                <li>Gerste</li>
-                <li>Dinkel</li>
-                <li>Roggen</li>
+                <li class="cereal">Weizen</li>
+                <li class="cereal">Gerste</li>
+                <li class="cereal">Dinkel</li>
+                <li class="cereal">Roggen</li>
                 <li>Alle</li>
             </ul>
         </div>

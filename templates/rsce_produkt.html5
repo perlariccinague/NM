@@ -92,7 +92,7 @@
 
      product = {
         id: <?= $this->id ?>,
-        cerealType: '<?= $this->cereal_type ?>',
+        cerealType: '<?= $this->cerealType ?>',
         dosageFrom: '<?= $this->dosageFrom ?>',
         dosageTo: '<?= $this->dosageTo ?>',
          smell: '<?= $this->smell ?>',
