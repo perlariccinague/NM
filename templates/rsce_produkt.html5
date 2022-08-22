@@ -106,9 +106,9 @@
      product = {
         id: <?= $this->id ?>,
         cerealType: '<?= $this->cerealType ?>',
-        dosageFrom: '<?= $this->dosageFrom ?>',
-        dosageTo: '<?= $this->dosageTo ?>',
-         smell: '<?= $this->smell ?>',
+        dosageFrom: parseFloat('<?= $this->dosageFrom ?>'),
+        dosageTo: parseFloat('<?= $this->dosageTo ?>'),
+        smell: '<?= $this->smell ?>',
         frische: '<?= $this->frische ?>',
         volume: '<?= $this->volume ?>',
         dk: '<?= $this->dk ?>',
@@ -127,9 +127,7 @@
         wheat: '<?= $wheat ?>',
         rye: '<?= $rye ?>',
         spelt: '<?= $spelt ?>',
-        barley: '<?= $barley ?>',
-         failedLeftCheck: false,
-         passedMiddleCheck: true
+        barley: '<?= $barley ?>'
 
 
     }
