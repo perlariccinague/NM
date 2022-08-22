@@ -20,7 +20,20 @@
     $pceB = $this->lab_pce_b;
     $pceBBase = $pceB - 10.2;
     $pceBPercentage = $pceBBase/27.7;
+    $wheat = false;
+    $rye = false;
+    $spelt = false;
+    $barley = false;
 
+    if($this->cerealType === 'Weizen') {
+        $wheat = true;
+    } elseif($this->cerealType === 'Roggen') {
+        $rye = true;
+    } elseif($this->cerealType === 'Dinkel') {
+        $spelt = true;
+    } elseif($this->cerealType === 'Gerste') {
+        $barley = true;
+    }
 ?>
 
 <div class="product" id="<?= $this->id ?>">
@@ -110,8 +123,13 @@
         ebc: '<?= $this->ebc ?>',
         lab_pce_l: '<?= $this->lab_pce_l ?>',
         lab_pce_a: '<?= $this->lab_pce_a ?>',
-        lab_pce_b: '<?= $this->lab_pce_b ?>'
-
+        lab_pce_b: '<?= $this->lab_pce_b ?>',
+        wheat: '<?= $wheat ?>',
+        rye: '<?= $rye ?>',
+        spelt: '<?= $spelt ?>',
+        barley: '<?= $barley ?>',
+         failedLeftCheck: false,
+         passedMiddleCheck: true
 
 
     }

@@ -24,10 +24,10 @@
         <div class="filter-bottom-middle">
             <h3>Getreidesorte</h3>
             <ul>
-                <li class="cereal">Weizen</li>
-                <li class="cereal">Gerste</li>
-                <li class="cereal">Dinkel</li>
-                <li class="cereal">Roggen</li>
+                <li id="Gerste" class="cereal">Gerste</li>
+                <li id="Weizen" class="cereal">Weizen</li>
+                <li id="Dinkel" class="cereal">Dinkel</li>
+                <li id="Roggen" class="cereal">Roggen</li>
                 <li>Alle</li>
             </ul>
         </div>

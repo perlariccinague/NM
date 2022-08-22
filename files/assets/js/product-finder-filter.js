@@ -19,53 +19,47 @@ const productList = document.querySelector('#product-finder-article');
 
 productList.style.display = 'none';
 
-const allFilterElements = document.querySelectorAll('#filter li');
-//const cerealType = document.querySelectorAll('.cereal');
+const allFilterElementsLeft = document.querySelectorAll('.filter-bottom-left li');
+const cerealType = document.querySelectorAll('.cereal');
 
 function filterNew() {
     productList.style.display = '';
-    allProducts.forEach(product => {
-        document.getElementById(product.id).style.display = '';
-        allFilterElements.forEach(element => {
-           // console.log(element.classList.contains('li-checked'));
-            console.log(product[element.id]);
-            if(element.classList.contains('li-checked') && !product[element.id]) {
+        allProducts.forEach(product => {
+            console.log('Product: ' + product.cerealType);
+            document.getElementById(product.id).style.display = '';
+            product.failedLeftCheck = false;
+            allFilterElementsLeft.forEach(element => {
+                if(element.classList.contains('li-checked') && !product[element.id]) {
+                    product.failedLeftCheck = true;
+                }
+            });
+            cerealType.forEach(filterElement => {
+                if(filterElement.classList.contains('li-checked')) {
+                    if(product.cerealType === filterElement.id) {
+                        console.log('Showing');
+                        product.passedMiddleCheck = true;
+                    }
+                }
+            });
+            if(product.failedLeftCheck && !product.passedMiddleCheck) {
                 document.getElementById(product.id).style.display = 'none';
             }
         })
-    })
-    /*cerealType.forEach(text =>{
-        let type = text.textContent
-        console.log(type);
-        if(text.classList.contains('li-checked')) {
+
+
+
+    /*cerealType.forEach(filterElement => {
+        if(filterElement.classList.contains('li-checked')) {
             allProducts.forEach(product => {
-                if(product.cerealType === 'Gerste') {
+                if(product.cerealType === filterElement.id && !product.failedLeftCheck) {
                     document.getElementById(product.id).style.display = '';
-                    productList.style.display = '';
-                    console.log(product.id)
-                }
-                else if(product.cerealType === 'Roggen') {
-                    document.getElementById(product.id).style.display = '';
-                    productList.style.display = '';
-                    console.log(product.id)
-                }
-                else if(product.cerealType === 'Weizen') {
-                    document.getElementById(product.id).style.display = '';
-                    productList.style.display = '';
-                    console.log(product.id)
-                }
-                else if(product.cerealType === 'Dinkel') {
-                    document.getElementById(product.id).style.display = '';
-                    productList.style.display = '';
-                    console.log(product.id)
-                }
-                else {
+                    product.passedMiddleCheck = true;
+                } else if(product.cerealType !== filterElement.id && !product.passedMiddleCheck) {
                     document.getElementById(product.id).style.display = 'none';
                 }
             });
         }
     })*/
-
 }
 
 document.querySelector('#dosierung').addEventListener('input', inputValue);
