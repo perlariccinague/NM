@@ -34,6 +34,47 @@
     } elseif($this->cerealType === 'Gerste') {
         $barley = true;
     }
+
+   if($this->smell === 'gut geeignet' || $this->smell === 'geeignet') {
+        $smell = true;
+    } else {
+        $smell = false;
+    }
+   if($this->frische === 'gut geeignet' || $this->frische === 'geeignet') {
+        $frische = true;
+   } else {
+        $frische = false;
+   }
+   if($this->volume === 'gut geeignet' || $this->volume === 'geeignet') {
+        $volume = true;
+   } else {
+        $volume = false;
+   }
+   if($this->light_bun === 'gut geeignet' || $this->light_bun === 'geeignet') {
+        $light_bun = true;
+   } else {
+        $light_bun = false;
+   }
+   if($this->special_bun === 'gut geeignet' || $this->special_bun === 'geeignet') {
+        $special_bun = true;
+   } else {
+       $special_bun = false;
+   }
+   if($this->wheat_bread === 'gut geeignet' || $this->wheat_bread === 'geeignet') {
+        $wheat_bread = true;
+   } else {
+        $wheat_bread = false;
+   }
+   if($this->rye_bread === 'gut geeignet' || $this->rye_bread === 'geeignet') {
+        $rye_bread = true;
+   } else {
+        $rye_bread = false;
+   }
+   if($this->grain_bread === 'gut geeignet' || $this->grain_bread === 'geeignet') {
+        $grain_bread = true;
+   } else {
+        $grain_bread = false;
+   }
 ?>
 
 <div class="product" id="<?= $this->id ?>">
@@ -108,16 +149,16 @@
         cerealType: '<?= $this->cerealType ?>',
         dosageFrom: parseFloat('<?= $this->dosageFrom ?>'),
         dosageTo: parseFloat('<?= $this->dosageTo ?>'),
-        smell: '<?= $this->smell ?>',
-        frische: '<?= $this->frische ?>',
-        volume: '<?= $this->volume ?>',
+        smell: '<?= $smell ?>',
+        frische: '<?= $frische ?>',
+        volume: '<?= $volume ?>',
         dk: '<?= $this->dk ?>',
         bio: '<?= $this->bio ?>',
-        light_bun: '<?= $this->light_bun ?>',
-        special_bun: '<?= $this->special_bun ?>',
-        wheat_bread: '<?= $this->wheat_bread ?>',
-        rye_bread: '<?= $this->rye_bread ?>',
-        grain_bread: '<?= $this->grain_bread ?>',
+        light_bun: '<?= $light_bun ?>',
+        special_bun: '<?= $special_bun ?>',
+        wheat_bread: '<?= $wheat_bread ?>',
+        rye_bread: '<?= $rye_bread ?>',
+        grain_bread: '<?= $grain_bread ?>',
         decor: '<?= $this->decor ?>',
         aromas: '<?= $this->aromas ?>',
         ebc: '<?= $this->ebc ?>',
