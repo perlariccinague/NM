@@ -1,7 +1,7 @@
 @import "variables";
 
 .contact-form {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -100,4 +100,12 @@ button.contact-button {
     }
    }
   }
+}
+
+.contact-form .widget.widget-text input, .contact-form .widget.widget-textarea textarea {
+  width: 80%;
+}
+
+.form_image .ce_form.contact-form .formbody input[type="checkbox"]:checked + label span {
+  background-color: $yellow;
 }

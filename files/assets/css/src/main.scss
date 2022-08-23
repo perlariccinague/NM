@@ -266,6 +266,34 @@
   }
 }
 
+#container ::placeholder {
+  color: white;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.contact {
+  .form_image {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: $max-width;
+    margin: 15px auto;
+  }
+}
+
+.ansprechpartner-box {
+  width: 30%;
+  .kontakt-image img {
+    width: 216px;
+    transition: transform 250ms ease-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
 @media screen and (max-width: 760px) {
   .teaser-news h2, .teaser-main h2 {
     font-size: 16px;
