@@ -14,8 +14,6 @@
                 <li id="grain_bread">Körnerbrot</li>
                 <li id="bio">Bio</li>
                 <li id="decor">Dekor</li>
-                <li id="dosage">Dosierung<input id="dosierung" type="number" value ="" min="0" max="100"></li>
-                <li id="dk">DK<input id="dk_field" type="number" value =""></li>
                 <li id="smell">Geruch Geschmack</li>
                 <li id="frische">Frischhaltung</li>
                 <li id="volume">Backvolumen</li>
@@ -32,11 +30,10 @@
             </ul>
         </div>
         <div class="filter-bottom-right">
-            <h3>Verwendung</h3>
+            <h3>Dosierung & Enzymaktivität</h3>
             <ul>
-                <li>Als Dekoration</li>
-                <li>Als Farbstoff</li>
-                <li>Alle</li>
+                <li id="dosage">Dosierung<input id="dosage-input" type="number" value ="" min="0" max="100"></li>
+                <li id="dk">DK<input id="dk_field" type="number" value =""></li>
             </ul>
         </div>
     </div>
