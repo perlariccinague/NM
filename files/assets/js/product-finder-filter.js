@@ -48,6 +48,7 @@ function filterNew() {
 
 
 
+
     /*cerealType.forEach(filterElement => {
         if(filterElement.classList.contains('li-checked')) {
             allProducts.forEach(product => {
