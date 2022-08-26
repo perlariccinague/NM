@@ -279,10 +279,11 @@
     width: 90%;
     max-width: $max-width;
     margin: 15px auto;
+    flex-wrap: wrap;
   }
 }
 
-.ansprechpartner-box {
+.form_image .ansprechpartner-box {
   width: 30%;
   .kontakt-image img {
     width: 216px;
@@ -366,11 +367,22 @@
   }
 
   .mod_newslist .news .ce_text .h2-span, .mod_newslist .news .ce_text .h2-span1 {
-    top: 0px;
+    top: 0;
     position: relative;
   }
 
   .mod_newslist .news .ce_text p {
     margin-top: 0;
+  }
+  .form_image .ansprechpartner-box {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+    .kontakt-image-scan img {
+      width: 230px;
+    }
+    .kontakt-image p {
+      margin-left: 60px;
+    }
   }
 }

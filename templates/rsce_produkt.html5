@@ -83,7 +83,7 @@
         <div class="product_description_block">
             <?= $this->description  ?>
             <img src="/files/assets/layout/Brot.svg" alt="">
-            <span><a href=""><?= $this->file  ?></a><strong>DOWNLOAD Datenblatt</strong></span>
+            <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf">DOWNLOAD Datenblatt</a></span>
         </div>
 
     </div>
@@ -152,7 +152,7 @@
         smell: '<?= $smell ?>',
         frische: '<?= $frische ?>',
         volume: '<?= $volume ?>',
-        dk: '<?= $this->dk ?>',
+        dk: parseInt('<?= $this->dk ?>'),
         bio: '<?= $this->bio ?>',
         light_bun: '<?= $light_bun ?>',
         special_bun: '<?= $special_bun ?>',

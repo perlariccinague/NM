@@ -26,19 +26,21 @@
                 <li id="Weizen" class="cereal">Weizen</li>
                 <li id="Dinkel" class="cereal">Dinkel</li>
                 <li id="Roggen" class="cereal">Roggen</li>
-                <li>Alle</li>
             </ul>
         </div>
         <div class="filter-bottom-right">
             <h3>Dosierung & Enzymaktivität</h3>
             <ul>
-                <li id="dosage">Dosierung<input id="dosage-input" type="number" value ="" min="0" max="100"></li>
-                <li id="dk">DK<input id="dk_field" type="number" value =""></li>
+                <li id="dosage"><label>Dosierung</label><input id="dosage-input" type="number" value=""onchange="activeDosage()" min="0" max="100"></li>
+                <li id="dk"><label>DK</label><input id="dk_field" type="number" value ="" onchange="activate()" onclick="filterReset()"></li>
+
             </ul>
         </div>
     </div>
 
     <button type="submit" class="submit" value="Filter">Filtern</button>
+    <button type="submit" class="reset" value="Filter">Filter zürucksetzen</button>
+
 </div>
 
 <script>

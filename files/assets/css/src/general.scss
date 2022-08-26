@@ -19,6 +19,13 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family:"Weimar",sans-serif;
+  src:url("../fonts/weimar.woff?hglndod") format("woff"),
+  url("../fonts/weimar.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400
+}
 body {
   font-family:"Barlow Condensed", sans-serif;
 }
@@ -28,3 +35,5 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+

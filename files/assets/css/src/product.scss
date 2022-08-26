@@ -173,7 +173,7 @@
               left: 0;
               font-size: 17px;
             }
-            &.li-checked {
+            &.li-checked{
               &:before {
                 content: '9';
               }
@@ -185,10 +185,9 @@
   }
 }
 
-#filter .submit {
+#filter .submit, #filter .reset {
   margin: 15px auto;
-  padding: 2px 15px;
-  font-size: 17px;
+  color: white;
 }
 
 .product_description img {
@@ -218,7 +217,21 @@
 }
 
 #filter input {
-  margin: 0 3px;
+  cursor: pointer;
+  outline: 0;
+  border: 1px solid #f9bd3f;
+  background: transparent;
+  color: white;
+}
+
+#filter li label {
+  display: inline-block;
+  width: 95px;
+  color: white;
+}
+
+#filter #dosage, #filter #dk {
+  margin: 15px 0;
 }
 
 @media screen and (max-width: 760px) {

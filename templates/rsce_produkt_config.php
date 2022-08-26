@@ -175,7 +175,6 @@ return array(
             'label' => array('DOWNLOAD', ''),
             'inputType' => 'fileTree',
             'eval' => array(
-                'fieldType' => 'checkbox',
                 'filesOnly' => true,
                 'isDownloads'=> true,
                 'extensions' => 'pdf',
