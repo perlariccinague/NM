@@ -32,7 +32,8 @@ return array(
             'Weizen',
             'Roggen',
             'Gerste',
-            'Dinkel'
+            'Dinkel',
+            'Keine'
           ),
           'eval' => Array('tl_class' => 'w50')
         ),

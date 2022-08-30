@@ -1,11 +1,4 @@
-@import "footer";
-@import "header";
-@import "main";
-@import "slider";
-@import "menu";
-@import "form";
-@import "form-header";
-@import "product";
+@import 'variables';
 
 @font-face {
   font-family: "Barlow";
@@ -20,12 +13,13 @@
 }
 
 @font-face {
-  font-family:"Weimar",sans-serif;
-  src:url("../fonts/weimar.woff?hglndod") format("woff"),
-  url("../fonts/weimar.ttf") format("truetype");
+  font-family:"Weimar";
+  src:url("../fonts/weimar.woff?hglndod") format('woff'), url("../fonts/weimar.ttf") format('truetype');
   font-style:normal;
   font-weight:400
 }
+
+
 body {
   font-family:"Barlow Condensed", sans-serif;
 }
@@ -35,5 +29,14 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+@import "footer";
+@import "header";
+@import "main";
+@import "slider";
+@import "menu";
+@import "form";
+@import "form-header";
+@import "product";
 
 

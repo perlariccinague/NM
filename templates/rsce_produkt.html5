@@ -83,7 +83,10 @@
         <div class="product_description_block">
             <?= $this->description  ?>
             <img src="/files/assets/layout/Brot.svg" alt="">
-            <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf">DOWNLOAD Datenblatt</a></span>
+            <div>
+                <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf"><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</a></span>
+
+            </div>
         </div>
 
     </div>
@@ -96,7 +99,9 @@
             <p><span>Geruch Geschmack </span><span class="star"><?= $this->smell  ?></span></p>
             <p><span>Frischhaltung</span><span class="star"><?= $this->frische  ?></span></p>
             <p><span>Backvolumen</span><span class="star"><?= $this->volume  ?></span></p>
+            <?php if($this->dk != ""): ?>
             <p><span>Enzymaktivität (DK)</span><span class="star"><?= $this->dk  ?></span></p>
+            <?php endif; ?>
             <p><span>Bio</span>
                 <?php if($this->bio): ?>
                   <?= "ja"?>
@@ -116,7 +121,9 @@
                     <?= "Nein"?>
                 <?php endif; ?>
             </p>
+            <?php if($this->aromas != ""): ?>
             <p><span>Aromen</span> <?= $this->aromas  ?></p>
+            <?php endif; ?>
         </div>
         <div class="item_middle">
             <p><strong>EBC</strong></p>
