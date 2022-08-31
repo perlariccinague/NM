@@ -31,8 +31,8 @@
         <div class="filter-bottom-right">
             <h3>Dosierung & Enzymaktivität</h3>
             <ul>
-                <li id="dosage"><label>Dosierung</label><input id="dosage-input" type="number" value=""onchange="activeDosage()" min="0" max="100"></li>
-                <li id="dk"><label>DK</label><input id="dk_field" type="number" value ="" onchange="activate()" onclick="filterReset()"></li>
+                <li id="dosage"><label>Dosierung</label><input id="dosage-input" type="number" value="" onchange="activeDosage()" min="0" max="100"></li>
+                <li id="dk"><label>DK</label><input id="dk_field" type="number" value ="" onchange="activeDk()" ></li>
 
             </ul>
         </div>

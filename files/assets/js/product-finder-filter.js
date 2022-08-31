@@ -17,15 +17,49 @@ const dosageFilter = document.querySelector('#dosage');
 const dosageFilterInput = document.querySelector('#dosage-input');
 const dkFilter = document.querySelector('#dk');
 const dkFilterInput = document.querySelector('#dk_field');
+let countNotification = 0;
 
-//const dosage = document.querySelector('#dosage');
+const popUp = document.createElement("div");
+popUp.classList.add('notification')
+popUp.innerHTML = "Bitte tragen Sie hier eine Zahl ein.";
 
 productList.style.display = 'none';
 
 const allFilterElementsLeft = document.querySelectorAll('.filter-bottom-left li');
 const cerealType = document.querySelectorAll('.cereal');
+const scroll = document.querySelector('.product-finder-filter-article').getBoundingClientRect().top + window.scrollY;
 
-function filter() {
+function filter(e) {
+  window.scrollTo({
+        behavior: 'smooth',
+        top: scroll,
+    });
+    if(dosageFilter.classList.contains('li-checked') && dosageFilterInput.value === "" ) {
+        dosageFilter.appendChild(popUp);
+        //document.querySelector('.notification').style.opacity = '1'
+        setTimeout(function() {
+            document.querySelector('.notification').style.opacity = '1';
+            // Increment The Notification counter
+            countNotification ++;
+            console.log(countNotification);
+        }, 100)
+        setTimeout(function() {
+            document.querySelector('.notification').style.opacity = '0';
+        }, 6000);
+    } else if (dkFilter.classList.contains('li-checked') && dkFilterInput.value === "" ){
+        dkFilter.appendChild(popUp);
+       // document.querySelector('.notification').style.opacity = '1'
+        setTimeout(function() {
+            document.querySelector('.notification').style.opacity = '1';
+        }, 100)
+        setTimeout(function() {
+            document.querySelector('.notification').style.opacity = '0';
+        }, 6000);
+    }
+     else if (document.querySelector('.notification')) {
+        document.querySelector('.notification').style.opacity = '0'
+    }
+
     if(document.querySelector('#filter .li-checked')) {
         productList.style.display = '';
         allProducts.forEach(product => {
@@ -42,7 +76,7 @@ function filter() {
 
             // Linke Spalte filtern (sobald eine Checkbox gesetzt ist und dieses Produkt diese Eigenschaft nicht hat, Fail-Flag setzen)
             allFilterElementsLeft.forEach(element => {
-                if(element.classList.contains('li-checked') && !product[element.id]) {
+                if(element.classList.contains('li-checked') && !product[element.id])  {
                     product.failedLeftCheck = true;
                 }
             });
@@ -52,7 +86,7 @@ function filter() {
             // Erst schauen, ob irgendeine Checkbox aktiv ist und wenn ja, muss gefiltert werden:
             if(document.querySelector('.filter-bottom-middle .li-checked')) {
                 cerealType.forEach(filterElement => {
-                    if(filterElement.classList.contains('li-checked') && product.cerealType === filterElement.id) {
+                    if(filterElement.classList.contains('li-checked') && product.cerealType === filterElement.id ) {
                         product.failedMiddleCheck = false;
                     }
                 });
@@ -84,7 +118,6 @@ function filter() {
                 });
             }*/
 
-
             if(dkFilter.classList.contains('li-checked') ) {
                 if(product.dk === parseInt(dkFilterInput.value)){
                     product.failedDKCheck = false;
@@ -92,8 +125,6 @@ function filter() {
             } else {
                 product.failedDKCheck = false;
             }
-
-
 
             // Am Ende schauen, ob eins der Flags gesetzt ist, und wenn ja, dann dieses Produkt ausblenden
             if(product.failedLeftCheck || product.failedMiddleCheck || product.failedDosageCheck || product.failedDKCheck) {
@@ -110,6 +141,7 @@ dkFilterInput.addEventListener('input', function (){
     dkFilter.classList.add('li-checked');
 })
 
+
 /*dkFilterInput.addEventListener('change', function (){
     dkFilter.classList.add('li-checked');
 })*/
@@ -122,7 +154,7 @@ dosageFilter.addEventListener('input', function (){
     dosageFilter.classList.add('li-checked');
 })*/
 
-function activate() {
+function activeDk() {
     dkFilter.classList.add('li-checked');
 }
 
@@ -142,6 +174,7 @@ function filterReset() {
     dosageFilterInput.value ='';
     productList.style.display ='none';
 }
+
 
 btn.addEventListener("click", filter);
 document.querySelector('#dosage-input').addEventListener('input', filter);

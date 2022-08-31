@@ -247,6 +247,22 @@
 
 #filter #dosage, #filter #dk {
   margin: 15px 0;
+  position: relative;
+}
+
+.notification {
+  background: crimson;
+  width: 88px;
+  text-transform: full-size-kana;
+  height: auto;
+  position: absolute;
+  left: -108px;
+  top: -20px;
+  font-size: 15px;
+  padding: 5px 6px;
+  opacity: 0;
+  transition: opacity 250ms;
+  font-style: italic;
 }
 
 @media screen and (max-width: 760px) {
