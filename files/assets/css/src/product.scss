@@ -2,12 +2,16 @@
 
 #product-finder-article {
   padding-top: 50px;
+  opacity: 0;
+  transition: opacity 250ms;
 }
 
 .product {
   width: 90%;
   max-width: $max-width ;
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 250ms;
 }
 
 .product_description {
@@ -303,6 +307,14 @@
   }
   .product_items .item_left p span {
     width: 160px;
+  }
+  .product-finder-filter-article #filter .filter-bottom div{
+    .notification {
+      left: 21px;
+      width: 80px;
+      top: -18px;
+      font-size: 13px;
+    }
   }
 }
 
