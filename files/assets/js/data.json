@@ -1,0 +1,113 @@
+{
+  "questions" : [
+    {"id":  1,
+    "previewId": 0,
+    "question": "Welche Gebiet ?",
+    "answers": [
+      {
+        "text": "Brauen",
+        "target": 7
+      },
+      {
+        "text": "Mühle",
+        "target": 6
+      },
+      {
+        "text": "Brot und Kleingebäck",
+        "target": 3
+      },
+      {
+        "text": "Weitere Anwendungen",
+        "target": 2
+      }
+    ]
+    },
+    {
+      "id": 2,
+      "previewId": 1,
+      "question": "Welche Weitere Anwendungen ?",
+      "answers": [
+        {
+          "text": "Feine Backwaren",
+          "target": 10
+        },
+        {
+          "text": "Petfood",
+          "target": 11
+        },
+        {
+          "text": "Teigwaren",
+          "target": 12
+        },
+        {
+          "text": "Weitere Anwendungen",
+          "target": 12
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "previewId": 1,
+      "question": "Welche Brot und Kleingebäck ?",
+      "answers": [
+        {
+          "text": "Enzymaktive Malze",
+          "target": 8
+        },
+        {
+          "text": "Aromamalz",
+          "target": 4
+        },
+        {
+          "text": "Röstmalz",
+          "target": 5
+        },
+        {
+          "text": "Malzflocken und Schrote",
+          "target": 9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "previewId": 3,
+      "question": "Welche Aromamalz ?",
+      "answers": [
+        {
+          "text": "Helle Malze",
+          "target": 14
+        },
+        {
+          "text": "Dunklere Malze",
+          "target": 15
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "previewId": 3,
+      "question": "Welche Röstmalz ?",
+      "answers": [
+        {
+          "text": "Gerste",
+          "target": 16
+        },
+        {
+          "text": "Weizen",
+          "target": 17
+        },
+        {
+          "text": "Roggen",
+          "target": 18
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "previewId": 4,
+      "question": "Hier sind alle Helle Malze",
+      "answers": [],
+      "products": [252, 262]
+    }
+  ]
+}

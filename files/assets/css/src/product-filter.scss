@@ -1,0 +1,85 @@
+@import "variables";
+
+#self-test {
+  padding-bottom: 30px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  .self-test-form {
+    border: 1px solid #f8a800;
+    padding: 20px 25px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    .answers, .answers1, .answers2, .answersB1, .answersB13 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 25px 0;
+      & > div {
+        width: 20%;
+        text-align: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 250ms;
+        color: black
+      }
+    }
+    .progress-bar {
+      position: relative;
+      width: 100%;
+      height: 9px;
+      background: #ecdead;
+      border-radius: 3px;
+      margin: 15px 0;
+      .progress-bar-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: #c99c00;
+        border-radius: 3px;
+        transition: width 250ms;
+      }
+    }
+    .back-button, .new-button {
+      display: none;
+      width: 80px;
+      text-align: center;
+      padding: 10px 12px;
+      background: #f8a800c9;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      user-select: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 15px;
+      transition: background-color 250ms;
+    }
+
+    .new-button {
+      width: 20%;
+      margin: 25px 0;
+      background: transparent;
+      padding: 10px 12px;
+      border: 1px solid #f8a800;
+
+    }
+  }
+}
+
+#product-finder-article1 {
+  padding-top: 50px;
+  .product {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+  }
+}
+

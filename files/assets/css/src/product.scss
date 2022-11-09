@@ -2,17 +2,20 @@
 
 #product-finder-article {
   padding-top: 50px;
-  opacity: 0;
+  /*opacity: 0;*/
   transition: opacity 250ms;
 }
 
-.product {
+#product-finder-article .product {
   width: 90%;
   max-width: $max-width ;
   margin: 0 auto;
-  opacity: 0;
+ /* opacity: 0;*/
   transition: opacity 250ms;
 }
+/*#product-finder-article1 .product {
+  opacity: 1;
+}*/
 
 .product_description {
   background: $yellow;

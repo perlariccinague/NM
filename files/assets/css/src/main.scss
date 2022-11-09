@@ -294,6 +294,12 @@
   }
 }
 
+.contain_video {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 760px) {
   .teaser-news h2, .teaser-main h2 {
