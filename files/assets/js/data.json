@@ -1,7 +1,7 @@
 {
   "questions" : [
     {"id":  1,
-    "previewId": 0,
+    "previousId": 0,
     "question": "Welche Gebiet ?",
     "answers": [
       {
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "previewId": 1,
+      "previousId": 1,
       "question": "Welche Weitere Anwendungen ?",
       "answers": [
         {
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "previewId": 1,
+      "previousId": 1,
       "question": "Welche Brot und Kleingebäck ?",
       "answers": [
         {
@@ -70,7 +70,7 @@
     },
     {
       "id": 4,
-      "previewId": 3,
+      "previousId": 3,
       "question": "Welche Aromamalz ?",
       "answers": [
         {
@@ -85,7 +85,7 @@
     },
     {
       "id": 5,
-      "previewId": 3,
+      "previousId": 3,
       "question": "Welche Röstmalz ?",
       "answers": [
         {
@@ -104,10 +104,61 @@
     },
     {
       "id": 14,
-      "previewId": 4,
+      "previousId": 4,
       "question": "Hier sind alle Helle Malze",
       "answers": [],
-      "products": [252, 262]
+      "products": [253, 285, 286, 287, 288,289]
+    },
+    {
+      "id": 15,
+      "previousId": 4,
+      "question": "Hier sind alle dunklere Malze",
+      "answers": [],
+      "products": [290, 291, 292, 294, 296, 297]
+    },
+    {
+      "id": 16,
+      "previousId": 5,
+      "question": "Hier sind alle Gerste",
+      "answers": [],
+      "products": [265, 304, 305, 306]
+    },
+    {
+      "id": 17,
+      "previousId": 5,
+      "question": "Hier sind alle Weizen",
+      "answers": [],
+      "products": [299]
+    },
+    {
+      "id": 18,
+      "previousId": 5,
+      "question": "Hier sind alle Roggen",
+      "answers": [],
+      "products": [263]
+    },
+    {
+      "id": 9,
+      "previousId": 3,
+      "question": " Hier sind alle Malzflocken und Schrote",
+      "answers": [],
+      "products": [301, 302, 303]
+    },
+    {
+      "id": 8,
+      "previousId": 3,
+      "question": "Hier sind alle Enzymaktive Malze",
+      "answers": [],
+      "products": [252, 262, 246, 307]
+    },
+    {
+      "id": 6,
+      "previousId": 1,
+      "question": "Hier sind alle Mühle",
+      "answers": [],
+      "products": [252, 262, 246]
+
+
     }
   ]
 }

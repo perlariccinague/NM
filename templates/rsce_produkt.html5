@@ -179,7 +179,7 @@
 
 
     }
-    allProducts.push(product);
+  /*  allProducts.push(product);*/
 
 
 </script>

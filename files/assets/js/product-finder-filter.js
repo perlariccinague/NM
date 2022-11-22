@@ -1,3 +1,4 @@
+/*
 const filterProduct = document.querySelectorAll('.product');
 const allUlRight = document.querySelectorAll('#filter ul li');
 allUlRight.forEach(item => {
@@ -133,10 +134,10 @@ function filter(e) {
                 setTimeout(function() {
                     document.getElementById(product.id).style.display = 'none';
                 }, 250);
-            } /*else if( product.failedLeftCheck || product.failedMiddleCheck || dosageFilterInput.value === "" ){
+            } /!*else if( product.failedLeftCheck || product.failedMiddleCheck || dosageFilterInput.value === "" ){
                 console.log(product.id);
                 document.getElementById(product.id).style.display = '';
-            }*/
+            }*!/
         })
     } else {
        // productList.style.display = 'none';
@@ -182,3 +183,4 @@ function filterReset() {
 btn.addEventListener("click", filter);
 document.querySelector('#dosage-input').addEventListener('input', filter);
 document.querySelector('#dk_field').addEventListener('input', filter);
+*/
