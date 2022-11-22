@@ -6,12 +6,9 @@
         <div class="answers">
 
         </div>
-
-        <!--<div class="progress-bar">
-            <div class="progress-bar-fill"></div>
-        </div>-->
+        <div class="contact-button">Anfrage zu diesen Produkten</div>
         <div class="back-button">Zurück</div>
-        <div class="new-button">Filter zürucksetzen</div>
+        <!-- <div class="new-button">Filter zürucksetzen</div> -->
     </div>
 </div>
 

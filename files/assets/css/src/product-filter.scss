@@ -18,6 +18,9 @@
       justify-content: space-between;
       margin: 25px 0;
       & > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 20%;
         text-align: center;
         background: white;
@@ -47,9 +50,9 @@
         transition: width 250ms;
       }
     }
-    .back-button, .new-button {
+    .contact-button {
       display: none;
-      width: 80px;
+      width: 250px;
       text-align: center;
       padding: 10px 12px;
       background: #f8a800c9;
@@ -61,15 +64,28 @@
       font-weight: bold;
       font-size: 15px;
       transition: background-color 250ms;
+      &:hover {
+        background-color: #c69b43;
+      }
     }
-
-    .new-button {
-      width: 20%;
-      margin: 25px 0;
-      background: transparent;
+    .back-button {
+      display: none;
+      width: 100px;
+      text-align: center;
       padding: 10px 12px;
-      border: 1px solid #f8a800;
-
+      background: transparent;
+      border: 1px solid #f8a800c9;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      user-select: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 15px;
+      transition: background-color 250ms;
+      &:hover {
+        background-color: rgba(255,255,255,.2);
+      }
     }
   }
 }
