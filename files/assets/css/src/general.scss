@@ -20,6 +20,12 @@
 }
 
 
+@font-face {
+  font-family: "Weimar";
+  src: url("../fonts/Weimar.ttf") format('truetype');
+  src: url("../fonts/Weimar.woff") format('woff');
+}
+
 body {
   font-family:"Barlow Condensed", sans-serif;
 }
@@ -39,5 +45,14 @@ ul {
 @import "form-header";
 @import "product";
 @import "product-filter";
+
+@import "footer";
+@import "header";
+@import "main";
+@import "slider";
+@import "menu";
+@import "form";
+@import "form-header";
+@import "product";
 
 
