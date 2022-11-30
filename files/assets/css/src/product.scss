@@ -43,18 +43,18 @@
   padding-bottom: 20px;
   .item_left {
     width: 60%;
-    text-transform: uppercase;
     p {
       margin: 0;
-      padding: 6px 0;
-      font-size: 19px;
+      padding: 4px 0;
+      font-size: 16px;
       &:nth-child(2n) {
         background-color: #f8a80020;
       }
       &:not(:last-child) {
         border-bottom: 1px solid $yellow;
       }
-      span {
+      span:not(.star) {
+        font-weight: bold;
         display: inline-block;
         width: 260px;
       }

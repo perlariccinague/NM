@@ -12,6 +12,13 @@
     border-radius: 5px;
     position: relative;
     box-sizing: border-box;
+    #question {
+      text-transform: none;
+      > span {
+        text-transform: uppercase;
+        color: $yellow-dunkel;
+      }
+    }
     .answers, .answers1, .answers2, .answersB1, .answersB13 {
       display: flex;
       flex-wrap: wrap;
@@ -29,7 +36,10 @@
         cursor: pointer;
         user-select: none;
         transition: background-color 250ms;
-        color: black
+        color: black;
+        &:hover {
+          background-color: $yellow;
+        }
       }
     }
     .progress-bar {
@@ -100,3 +110,7 @@
   }
 }
 
+body.product-finder #header {
+  background-image: url('../bilder/header/Malze-5337.webp');
+  height: 40vh;
+}

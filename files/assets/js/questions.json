@@ -48,7 +48,7 @@
     {
       "id": 3,
       "previousId": 1,
-      "question": "Möchten Sie lediglich den Geschmack beeinflussen (&rarr;Aromamalz), Farbe und etwas Geschmack verändern (&rarr;Röstmalz), dekorieren (&rarr;Malzflocken und Schrote) oder das Backverhalten bestimmen (&rarr;Enzymaktive Malze)?",
+      "question": "Möchten Sie lediglich den Geschmack beeinflussen (&rarr; <span>Aromamalz</span>), Farbe und etwas Geschmack verändern (&rarr; <span>Röstmalz</span>), dekorieren (&rarr; <span>Malzflocken und Schrote</span>) oder das Backverhalten bestimmen (&rarr; <span>Enzymaktive Malze</span>)?",
       "answers": [
         {
           "text": "Enzymaktive Malze",
@@ -86,7 +86,7 @@
     {
       "id": 5,
       "previousId": 3,
-      "question": "Welche Getreidesorte? (&rarr;Gerste für hell und wenig Geschmack, &rarr;Weizen für etwas dunkler und wenig Geschmack, &rarr;Roggen für dunkel und viel Geschmack)",
+      "question": "Welche Getreidesorte? (&rarr; <span>Gerste</span> für hell und wenig Geschmack, &rarr; <span>Weizen</span> für etwas dunkler und wenig Geschmack, &rarr; <span>Roggen</span> für dunkel und viel Geschmack)",
       "answers": [
         {
           "text": "Gerste",
@@ -157,6 +157,15 @@
       "question": "In der Liste unten finden Sie alle Mehle für den Einsatz in Mühlen",
       "answers": [],
       "products": [252, 262, 246]
+
+
+    },
+    {
+      "id": 7,
+      "previousId": 1,
+      "question": "In der Liste unten finden Sie alle Mehle fürs Brauen",
+      "answers": [],
+      "products": [246]
 
 
     }
