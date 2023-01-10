@@ -19,20 +19,29 @@ contactButton.classList.add('invisible');
 const showProducts = (products) => {
     if(products.length > 0) {
         allProductElements.forEach(product => {
-            product.classList.add('invisible-product');
+            console.log(product.classList);
+            product.classList.add('fading-product');
+            console.log('Adding Fading Class and removing visible-product');
             product.classList.remove('visible-product');
+            console.log(product.classList);
+            setTimeout(() => {
+                console.log('Removing Fading Class');
+                product.classList.remove('fading-product');
+               product.classList.add('invisible-product');
+            }, 2000);
             if(products.includes(parseInt(product.id))) {
+                product.classList.add('fading-product');
+                product.classList.remove('invisible-product');
                 setTimeout(() => {
-                    product.classList.remove('invisible-product');
+                    product.classList.remove('fading-product');
                     product.classList.add('visible-product');
-                },500)
+                },2000)
             }
         })
     }
 }
 
 const findAllRelatedProducts = (data, answer) => {
-    console.log('Finding all related products');
     relatedProducts = [];
     targetId = answer.target;
     data.questions.forEach(newId => {
@@ -47,7 +56,6 @@ const findAllRelatedProducts = (data, answer) => {
             }
         }
     })
-    console.log('returning: ', relatedProducts);
     return relatedProducts;
 }
 
@@ -77,9 +85,7 @@ const startFilter = (data) => {
                     question.answers.forEach(answer => {
 
                         if(!hasProduct) {
-                            console.log('No Products found for this Question');
                             allProductsToShow = allProductsToShow.concat(findAllRelatedProducts(data, answer));
-                            console.log('All Products to Show: ', allProductsToShow);
                         }
 
                         const button = document.createElement('div');
