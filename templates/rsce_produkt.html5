@@ -77,8 +77,8 @@
    }
 ?>
 
-<div class="product" id="<?= $this->id ?>">
-    <div class="product_description">
+<section class="product ce_accordion ce_accordionStart" id="<?= $this->id ?>">
+    <div class="product_description toggler">
         <h2> <?= $this->product_title  ?></h2>
         <div class="product_description_block">
             <?= $this->description  ?>
@@ -90,7 +90,7 @@
         </div>
 
     </div>
-    <div class="product_items">
+    <div class="product_items accordion">
         <div class="item_left">
             <?php if($this->cerealType != ""): ?>
               <p><span>Getreideart</span> <?= $this->cerealType ?></p>
@@ -147,7 +147,7 @@
         </div>
     </div>
 
-</div>
+</section>
 
 <script>
 
@@ -183,4 +183,3 @@
 
 
 </script>
-

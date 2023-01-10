@@ -1,34 +1,44 @@
-const questionsUrl = 'files/assets/js/questions.json';
-const productsUrl = 'files/assets/js/products.json';
+const allProductElements = document.querySelectorAll('.product');
 const questionContainer = document.getElementById('question');
 const answerContainer = document.querySelector('.answers');
-const backButton = document.querySelector('.back-button');
 const contactButton = document.querySelector('.contact-button');
-const allProductElements = document.querySelectorAll('.product');
-let questionId;
-let allAnswers = [];
+const backButton = document.querySelector('.back-button');
+const questionsUrl = 'files/assets/js/questions.json';
+const productsUrl = 'files/assets/js/products.json';
+let relatedProducts = [];
 let allProductsToShow = [];
+let allAnswers = [];
 let previousId = 0;
-let targetId;
 let allProducts;
+let questionId;
+let targetId;
 
-const showProducts = () => {
-    if(allProductsToShow.length > 0) {
+backButton.classList.add('invisible');
+contactButton.classList.add('invisible');
+
+const showProducts = (products) => {
+    if(products.length > 0) {
         allProductElements.forEach(product => {
-            product.style.display = 'none';
-            if(allProductsToShow.includes(parseInt(product.id))) {
-                product.style.display = 'block';
+            product.classList.add('invisible-product');
+            product.classList.remove('visible-product');
+            if(products.includes(parseInt(product.id))) {
+                setTimeout(() => {
+                    product.classList.remove('invisible-product');
+                    product.classList.add('visible-product');
+                },500)
             }
         })
     }
 }
 
 const findAllRelatedProducts = (data, answer) => {
+    console.log('Finding all related products');
+    relatedProducts = [];
     targetId = answer.target;
     data.questions.forEach(newId => {
         if(newId.id === targetId) {
             if(newId.products) {
-                allProductsToShow = allProductsToShow.concat(newId.products);
+                relatedProducts = relatedProducts.concat(newId.products);
             }
             else {
                 newId.answers.forEach(answer => {
@@ -37,13 +47,15 @@ const findAllRelatedProducts = (data, answer) => {
             }
         }
     })
-    showProducts();
+    console.log('returning: ', relatedProducts);
+    return relatedProducts;
 }
 
 
 const startFilter = (data) => {
 
     const showCurrentQuestion = (id) => {
+        allProductsToShow = [];
         data.questions.forEach(question => {
             questionId = question.id;
 
@@ -51,49 +63,49 @@ const startFilter = (data) => {
 
                 let hasProduct = false;
                 questionContainer.innerHTML = question.question;
-                previousId = question.previousId ;
+                previousId = question.previousId;
                 hasProduct = question.products;
-
-                if(hasProduct) {
-                    allProductsToShow = question.products;
-                    showProducts();
-                    contactButton.style.display = 'inline-block';
-                }
 
                 if(allAnswers.length > 0) {
                     allAnswers.forEach(child => child.remove())
                 }
 
-                question.answers.forEach(answer => {
+                if(hasProduct) {
+                    showProducts(question.products);
+                    contactButton.classList.remove('invisible');
+                } else {
+                    question.answers.forEach(answer => {
 
-                    if(!hasProduct) {
-                        findAllRelatedProducts(data, answer);
-                    }
+                        if(!hasProduct) {
+                            console.log('No Products found for this Question');
+                            allProductsToShow = allProductsToShow.concat(findAllRelatedProducts(data, answer));
+                            console.log('All Products to Show: ', allProductsToShow);
+                        }
 
-                    const button = document.createElement('div');
-                    button.innerHTML = answer.text;
-                    button.addEventListener('click', function() {
-                        allProductsToShow = [];
-                        showCurrentQuestion(answer.target);
-                        backButton.style.display = 'inline-block';
+                        const button = document.createElement('div');
+                        button.innerHTML = answer.text;
+                        button.addEventListener('click', function() {
+                            allProductsToShow = [];
+                            showCurrentQuestion(answer.target);
+                            backButton.classList.remove('invisible');
+                        })
+
+                        answerContainer.appendChild(button);
                     })
+                }
 
-                    answerContainer.appendChild(button);
-                })
-
-               allAnswers = document.querySelectorAll('.answers div');
+                showProducts(allProductsToShow);
+                allAnswers = document.querySelectorAll('.answers div');
 
             }
         })
     }
 
-    showCurrentQuestion(1);
-
     backButton.addEventListener('click', () => {
         showCurrentQuestion(previousId);
-        contactButton.style.display = 'none';
+        contactButton.classList.add('invisible');
         if(previousId === 0) {
-            backButton.style.display = 'none';
+            backButton.classList.add('invisible');
         }
 
     })
@@ -107,6 +119,8 @@ const startFilter = (data) => {
         })
         window.location.href = `mailto:c.koenig@bindewald.de?subject=Anfrage zu ${allNames}`
     })
+
+    showCurrentQuestion(1);
 }
 
 Promise.all([
