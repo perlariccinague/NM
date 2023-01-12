@@ -6,8 +6,9 @@ const backButton = document.querySelector('.back-button');
 const reload = document.querySelector('.reload');
 const questionsUrl = 'files/assets/js/questions.json';
 const productsUrl = 'files/assets/js/products.json';
-let relatedProducts = [];
+let allProductsToShowClean = [];
 let allProductsToShow = [];
+let relatedProducts = [];
 let allAnswers = [];
 let previousId = 0;
 let allProducts;
@@ -69,7 +70,7 @@ const findAllRelatedProducts = (data, answer) => {
             }
         }
     })
-    return relatedProducts;
+    allProductsToShow = allProductsToShow.concat(relatedProducts);
 }
 
 const startFilter = (data) => {
@@ -97,13 +98,18 @@ const startFilter = (data) => {
                     question.answers.forEach(answer => {
 
                         if(!hasProduct) {
-                            allProductsToShow = allProductsToShow.concat(findAllRelatedProducts(data, answer));
+                            findAllRelatedProducts(data, answer);
+                            allProductsToShow.forEach((c) => {
+                                if (!allProductsToShowClean.includes(c)) {
+                                    allProductsToShowClean.push(c);
+                                }
+                            });
                         }
 
                         const button = document.createElement('div');
                         button.innerHTML = answer.text;
                         button.addEventListener('click', function() {
-                            allProductsToShow = [];
+                            allProductsToShowClean = [];
                             showCurrentQuestion(answer.target);
                             backButton.classList.remove('invisible');
                         })
@@ -112,7 +118,7 @@ const startFilter = (data) => {
                     })
                 }
 
-                showProducts(allProductsToShow);
+                showProducts(allProductsToShowClean);
                 allAnswers = document.querySelectorAll('.answers div');
             }
         })
@@ -129,7 +135,7 @@ const startFilter = (data) => {
     contactButton.addEventListener('click', () => {
         let allNames = [];
         allProducts.forEach(product => {
-            if(allProductsToShow.includes(product.id)) {
+            if(allProductsToShowClean.includes(product.id)) {
                 allNames.push(product.name);
             }
         })

@@ -7,12 +7,14 @@
   margin: 0 auto;
   margin-top: 30px;
   .self-test-form {
+    height: 245px;
     border: 1px solid #f8a800;
     padding: 20px 25px;
     border-radius: 5px;
     position: relative;
     box-sizing: border-box;
     #question {
+      height: 55px;
       text-transform: none;
       line-height: 1.7em;
       > span {
@@ -30,6 +32,7 @@
         justify-content: space-around;
         align-items: center;
         width: 20%;
+        height: 54px;
         text-align: center;
         background: white;
         padding: 10px 15px;
@@ -117,6 +120,11 @@
 
 #product-finder-article .product.ce_accordion.fading-in-product {
   opacity: 1;
+  transition: opacity 500ms;
+}
+
+#product-finder-article .product.ce_accordion.fading-out-product {
+  opacity: 0;
   transition: opacity 500ms;
 }
 
