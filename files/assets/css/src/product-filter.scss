@@ -120,6 +120,11 @@
   transition: opacity 500ms;
 }
 
+#product-finder-article .product.ce_accordion.fading-out-product {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
 #product-finder-article1 {
   padding-top: 50px;
   .product {
