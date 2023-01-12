@@ -166,13 +166,21 @@ body.product-finder #header {
   }
 }
 
-.reload img .fading-in-image {
+.reload.visible-reload {
   opacity: 1;
-  transition: opacity 50ms;
+  transition: opacity 150ms;
 }
-.reload img .fading-out-image {
+.reload.invisible-reload {
   opacity: 0;
-  transition: opacity 50ms;
+  transition: opacity 150ms;
+}
+.reload.fading-in-reload {
+  opacity: 1;
+  transition: opacity 150ms;
+}
+.reload.fading-out-reload {
+  opacity: 0;
+  transition: opacity 150ms;
 }
 
 

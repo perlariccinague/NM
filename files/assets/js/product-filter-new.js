@@ -18,7 +18,6 @@ let targetId;
 
 backButton.classList.add('invisible');
 contactButton.classList.add('invisible');
-console.log(reload);
 
 const showProducts = (products) => {
     if(products.length > 0) {
@@ -39,17 +38,17 @@ const showProducts = (products) => {
             }, 300);
 
             if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product")) {
-                reload.style.opacity = '1';
-                reload.classList.add('fading-out-image');
+                reload.classList.add('fading-in-reload');
+                reload.classList.remove('invisible-reload');
                 setTimeout(() => {
-                    reload.classList.remove('fading-out-image');
-                    reload.classList.add('fading-in-product');
+                    reload.classList.remove('fading-in-reload');
+                    reload.classList.add('visible-reload');
                     setTimeout(() => {
-                        reload.classList.remove('fading-in-product');
-                        reload.style.opacity = '0';
-                    },100)
+                        reload.classList.remove('fading-out-reload');
+                        reload.classList.add('invisible-reload');
+                    },200)
 
-                }, 1000);
+                }, 300);
             }
         })
     }
@@ -83,6 +82,10 @@ const startFilter = (data) => {
             if(questionId === id ) {
 
                 let hasProduct = false;
+                // 1. Fade-out-Klasse hinzufügen
+                // 2. questionContainer.innerHTML = question.question; mit Timeout von 50ms
+                // 3. Noch im selben Teimout: Fade-in-Klasse hinzufügen und Fade-out-Klasse rausnehmen
+                // 4. In Timeout noch ein Timeout mit derselben Zeit: Fade-in-Klasse entfernen
                 questionContainer.innerHTML = question.question;
                 previousId = question.previousId;
                 hasProduct = question.products;
