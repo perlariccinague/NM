@@ -3,6 +3,7 @@ const questionContainer = document.getElementById('question');
 const answerContainer = document.querySelector('.answers');
 const contactButton = document.querySelector('.contact-button');
 const backButton = document.querySelector('.back-button');
+const reload = document.querySelector('.reload');
 const questionsUrl = 'files/assets/js/questions.json';
 const productsUrl = 'files/assets/js/products.json';
 let relatedProducts = [];
@@ -13,29 +14,41 @@ let allProducts;
 let questionId;
 let targetId;
 
+
 backButton.classList.add('invisible');
 contactButton.classList.add('invisible');
+console.log(reload);
 
 const showProducts = (products) => {
     if(products.length > 0) {
         allProductElements.forEach(product => {
-            console.log(product.classList);
-            product.classList.add('fading-product');
-            console.log('Adding Fading Class and removing visible-product');
+            product.classList.add('fading-out-product');
             product.classList.remove('visible-product');
-            console.log(product.classList);
             setTimeout(() => {
-                console.log('Removing Fading Class');
-                product.classList.remove('fading-product');
-               product.classList.add('invisible-product');
-            }, 2000);
-            if(products.includes(parseInt(product.id))) {
-                product.classList.add('fading-product');
-                product.classList.remove('invisible-product');
+                product.classList.remove('fading-out-product');
+                product.classList.add('invisible-product');
+                if(products.includes(parseInt(product.id))) {
+                    product.classList.add('fading-in-product')
+                    product.classList.remove('invisible-product');
+                    setTimeout(() => {
+                        product.classList.remove('fading-in-product');
+                        product.classList.add('visible-product');
+                    },300)
+                }
+            }, 300);
+
+            if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product")) {
+                reload.style.opacity = '1';
+                reload.classList.add('fading-out-image');
                 setTimeout(() => {
-                    product.classList.remove('fading-product');
-                    product.classList.add('visible-product');
-                },2000)
+                    reload.classList.remove('fading-out-image');
+                    reload.classList.add('fading-in-product');
+                    setTimeout(() => {
+                        reload.classList.remove('fading-in-product');
+                        reload.style.opacity = '0';
+                    },100)
+
+                }, 1000);
             }
         })
     }
@@ -58,7 +71,6 @@ const findAllRelatedProducts = (data, answer) => {
     })
     return relatedProducts;
 }
-
 
 const startFilter = (data) => {
 
@@ -102,7 +114,6 @@ const startFilter = (data) => {
 
                 showProducts(allProductsToShow);
                 allAnswers = document.querySelectorAll('.answers div');
-
             }
         })
     }
@@ -113,7 +124,6 @@ const startFilter = (data) => {
         if(previousId === 0) {
             backButton.classList.add('invisible');
         }
-
     })
 
     contactButton.addEventListener('click', () => {
@@ -140,3 +150,7 @@ Promise.all([
   .catch((err) => {
       console.log(err);
   });
+
+
+
+

@@ -152,6 +152,14 @@ return array(
             'inputType' => 'text',
           'eval' => Array('tl_class' => 'w50')
         ),
+        'image' => array(
+            'label' => array('Bild', ''),
+            'eval' => array(
+                'filesOnly' => true,
+                'tl_class' => 'clr'
+            ),
+            'inputType' => 'fileTree'
+        ),
         'ebc' => array(
             'label' => array('EBC'),
             'inputType' => 'text',

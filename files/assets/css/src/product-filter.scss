@@ -115,8 +115,9 @@
   transition: opacity 500ms;
 }
 
-#product-finder-article .product.ce_accordion.fading-product {
-  opacity: 0;
+#product-finder-article .product.ce_accordion.fading-in-product {
+  opacity: 1;
+  transition: opacity 500ms;
 }
 
 #product-finder-article1 {
@@ -132,4 +133,58 @@
 body.product-finder #header {
   background-image: url('../bilder/header/Malze-5337.webp');
   height: 40vh;
+}
+
+.reload {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  img {
+    width: 100px;
+    animation: rotation 6s infinite linear;
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.reload img .fading-in-image {
+  opacity: 1;
+  transition: opacity 50ms;
+}
+.reload img .fading-out-image {
+  opacity: 0;
+  transition: opacity 50ms;
+}
+
+
+@media screen and (max-width: 760px) {
+  #self-test {
+    .self-test-form {
+      height: auto;
+      .answers, .answers1, .answers2, .answersB1, .answersB13 {
+        & > div {
+          width: 100%;
+          margin: 8px auto;
+          padding: 0;
+        }
+      }
+      #question {
+        height: auto;
+      }
+      .contact-button {
+        margin: 10px auto;
+      }
+    }
+  }
 }

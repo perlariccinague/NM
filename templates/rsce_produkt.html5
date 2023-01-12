@@ -83,13 +83,10 @@
         <div class="product_description_block">
             <?= $this->description  ?>
             <img src="/files/assets/layout/Brot.svg" alt="">
-            <div>
-                <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf"><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</a></span>
-
-            </div>
         </div>
 
     </div>
+
     <div class="product_items accordion">
         <div class="item_left">
             <?php if($this->cerealType != ""): ?>
@@ -125,26 +122,40 @@
             <p><span>Aromen</span> <?= $this->aromas  ?></p>
             <?php endif; ?>
         </div>
-        <div class="item_middle">
-            <p><strong>EBC</strong></p>
-            <div class="ebc" <?php if($ebcWhiteText):?> style="color:transparent"<?php endif;?>><?= $this->ebc ?>
-                <div class="ebc-layover" style="opacity:<?= $ebcPercentage ?>"><?php if($ebcWhiteText):?><?= $this->ebc ?><?php endif;?></div>
-            </div>
-        </div>
+
         <div class="item_right">
-            <p><strong>LAB PCE</strong></p>
-            <div class="pce">
-                <div class="lab pce_l" <?php if($pceLBlackText): ?> style="color:transparent"<?php endif; ?>><?= $this->lab_pce_l ?>
-                    <div class="pce_l_layover layover" style="opacity:<?= $pceLPercentage ?>"><?php if($pceLBlackText): ?><?= $this->lab_pce_l ?><?php endif; ?></div>
-                </div>
-                <div class="lab pce_a"><?= $this->lab_pce_a ?>
-                    <div class="pce_a_layover layover" style="opacity:<?= $pceAPercentage ?>"><?= $this->lab_pce_a ?></div>
-                </div>
-                <div class="lab pce_b"><?= $this->lab_pce_b ?>
-                    <div class="pce_b_layover layover" style="opacity:<?= $pceBPercentage ?>"><?= $this->lab_pce_b ?></div>
-                </div>
+            <div class="title-image">
+                <p><img src="{{file::<?= $this->image ?>}}"></p>
             </div>
+            <div class="item_bottom" >
+                <div class="item_bottom-left">
+                    <p><strong>EBC</strong></p>
+                    <div class="ebc" <?php if($ebcWhiteText):?> style="color:transparent"<?php endif;?>><?= $this->ebc ?>
+                        <div class="ebc-layover" style="opacity:<?= $ebcPercentage ?>"><?php if($ebcWhiteText):?><?= $this->ebc ?><?php endif;?></div>
+                    </div>
+                </div>
+                <div class="item_bottom-right">
+                    <p><strong>LAB PCE</strong></p>
+                    <div class="pce">
+                        <div class="lab pce_l" <?php if($pceLBlackText): ?> style="color:transparent"<?php endif; ?>><?= $this->lab_pce_l ?>
+                            <div class="pce_l_layover layover" style="opacity:<?= $pceLPercentage ?>"><?php if($pceLBlackText): ?><?= $this->lab_pce_l ?><?php endif; ?></div>
+                        </div>
+                        <div class="lab pce_a"><?= $this->lab_pce_a ?>
+                            <div class="pce_a_layover layover" style="opacity:<?= $pceAPercentage ?>"><?= $this->lab_pce_a ?></div>
+                        </div>
+                        <div class="lab pce_b"><?= $this->lab_pce_b ?>
+                            <div class="pce_b_layover layover" style="opacity:<?= $pceBPercentage ?>"><?= $this->lab_pce_b ?></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </div>
+    </div>
+    <div class="download" >
+        <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf"><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</a></span>
     </div>
 
 </section>
