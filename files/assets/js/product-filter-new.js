@@ -45,9 +45,9 @@ const showProducts = (products) => {
                     setTimeout(() => {
                         reload.classList.remove('fading-out-reload');
                         reload.classList.add('invisible-reload');
-                    },100)
+                    },200)
 
-                }, 500);
+                }, 300);
             }
         })
     }
