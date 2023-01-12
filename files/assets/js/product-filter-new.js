@@ -17,7 +17,6 @@ let targetId;
 
 backButton.classList.add('invisible');
 contactButton.classList.add('invisible');
-console.log(reload);
 
 const showProducts = (products) => {
     if(products.length > 0) {
@@ -38,17 +37,17 @@ const showProducts = (products) => {
             }, 300);
 
             if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product")) {
-                reload.style.opacity = '1';
-                reload.classList.add('fading-out-image');
+                reload.classList.add('fading-in-reload');
+                reload.classList.remove('invisible-reload');
                 setTimeout(() => {
-                    reload.classList.remove('fading-out-image');
-                    reload.classList.add('fading-in-product');
+                    reload.classList.remove('fading-in-reload');
+                    reload.classList.add('visible-reload');
                     setTimeout(() => {
-                        reload.classList.remove('fading-in-product');
-                        reload.style.opacity = '0';
+                        reload.classList.remove('fading-out-reload');
+                        reload.classList.add('invisible-reload');
                     },100)
 
-                }, 1000);
+                }, 500);
             }
         })
     }
