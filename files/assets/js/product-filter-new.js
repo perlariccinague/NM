@@ -81,6 +81,10 @@ const startFilter = (data) => {
             if(questionId === id ) {
 
                 let hasProduct = false;
+                // 1. Fade-out-Klasse hinzufügen
+                // 2. questionContainer.innerHTML = question.question; mit Timeout von 50ms
+                // 3. Noch im selben Teimout: Fade-in-Klasse hinzufügen und Fade-out-Klasse rausnehmen
+                // 4. In Timeout noch ein Timeout mit derselben Zeit: Fade-in-Klasse entfernen
                 questionContainer.innerHTML = question.question;
                 previousId = question.previousId;
                 hasProduct = question.products;
