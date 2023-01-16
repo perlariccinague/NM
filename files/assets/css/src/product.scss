@@ -3,16 +3,6 @@
 #product-finder-article {
   padding-top: 30px;
   transition: opacity 500ms;
-  /*position: relative;
-  overflow: visible;
-  &:before {
-    content: url("/files/assets/layout/reload-spin.svg");
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    top: 0;
-  }*/
 }
 
 #product-finder-article .product {
@@ -75,12 +65,13 @@
   align-content: center;
   display: flex;
   top: 0;
+  text-decoration: none;
+  color: white;
   span {
-    margin: 0 auto;
-    a {
-      color: white;
-      text-decoration: none;
-    }
+   /* margin: 0 auto;*/
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
     img {
       width: 40px;
     }

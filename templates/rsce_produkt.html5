@@ -125,7 +125,7 @@
 
         <div class="item_right">
             <div class="title-image">
-                <p><img src="{{file::<?= $this->image ?>}}"></p>
+                <p><img src="{{file::<?= $this->picker ?>}}"></p>
             </div>
             <div class="item_bottom" >
                 <div class="item_bottom-left">
@@ -149,14 +149,14 @@
                     </div>
                 </div>
 
-
             </div>
 
         </div>
     </div>
-    <div class="download" >
-        <span><a href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf"><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</a></span>
-    </div>
+   <!-- <div class="download" >-->
+        <!--<span><a href="{{file::<?/*= $this->file  */?>}}" download="datenblatt.pdf"><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</a></span>-->
+        <a class="download" href="{{file::<?= $this->file  ?>}}" download="datenblatt.pdf"><span><img src="/files/assets/layout/arrow-down.svg" alt=""><br>Download Datenblatt</span></a>
+   <!-- </div>-->
 
 </section>
 

@@ -152,8 +152,8 @@ return array(
             'inputType' => 'text',
           'eval' => Array('tl_class' => 'w50')
         ),
-        'image' => array(
-            'label' => array('Bild', ''),
+        'picker' => array(
+            'label' => array('Picker', ''),
             'eval' => array(
                 'filesOnly' => true,
                 'tl_class' => 'clr'

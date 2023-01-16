@@ -82,14 +82,17 @@ const startFilter = (data) => {
             if(questionId === id ) {
 
                 let hasProduct = false;
-                // 1. Fade-out-Klasse hinzufügen
-                // 2. questionContainer.innerHTML = question.question; mit Timeout von 50ms
-                // 3. Noch im selben Teimout: Fade-in-Klasse hinzufügen und Fade-out-Klasse rausnehmen
-                // 4. In Timeout noch ein Timeout mit derselben Zeit: Fade-in-Klasse entfernen
-                questionContainer.innerHTML = question.question;
+                questionContainer.classList.add('fading-out-question');
+                setTimeout(() => {
+                    questionContainer.innerHTML = question.question;
+                    questionContainer.classList.add('fading-in-question');
+                    questionContainer.classList.remove('fading-out-question');
+                    setTimeout(() => {
+                        questionContainer.classList.remove('fading-in-question');
+                    }, 100)
+                }, 100)
                 previousId = question.previousId;
                 hasProduct = question.products;
-
                 if(allAnswers.length > 0) {
                     allAnswers.forEach(child => child.remove())
                 }
@@ -116,8 +119,17 @@ const startFilter = (data) => {
                             showCurrentQuestion(answer.target);
                             backButton.classList.remove('invisible');
                         })
-
-                        answerContainer.appendChild(button);
+                        answerContainer.classList.add('fading-out-question');
+                        setTimeout(() => {
+                            answerContainer.appendChild(button);
+                            answerContainer.classList.add('fading-in-question');
+                            answerContainer.classList.remove('fading-out-question');
+                            setTimeout(() => {
+                                answerContainer.classList.remove('fading-in-question');
+                            }, 100)
+                        }, 100)
+                       /* answerContainer.appendChild(button);*/
+                        console.log(answerContainer.appendChild(button).innerHTML);
                     })
                 }
 
