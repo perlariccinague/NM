@@ -1,0 +1,3 @@
+const fade = (target, time) => {
+
+}

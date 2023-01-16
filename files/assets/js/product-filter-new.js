@@ -1,3 +1,5 @@
+import 'fade';
+
 const allProductElements = document.querySelectorAll('.product');
 const questionContainer = document.getElementById('question');
 const answerContainer = document.querySelector('.answers');
@@ -24,7 +26,7 @@ const showProducts = (products) => {
         allProductElements.forEach(product => {
             product.classList.add('fading-out-product');
             product.classList.remove('visible-product');
-            setTimeout(() => {
+            /*setTimeout(() => {
                 product.classList.remove('fading-out-product');
                 product.classList.add('invisible-product');
                 if(products.includes(parseInt(product.id))) {
@@ -35,7 +37,8 @@ const showProducts = (products) => {
                         product.classList.add('visible-product');
                     },300)
                 }
-            }, 300);
+            }, 300);*/
+            fade(product,300);
 
             if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product")) {
                 reload.classList.add('fading-in-reload');

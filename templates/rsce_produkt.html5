@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="item_bottom-right">
-                    <p><strong>LAB PCE</strong></p>
+                    <p><strong>Lab</strong></p>
                     <div class="pce">
                         <div class="lab pce_l" <?php if($pceLBlackText): ?> style="color:transparent"<?php endif; ?>><?= $this->lab_pce_l ?>
                             <div class="pce_l_layover layover" style="opacity:<?= $pceLPercentage ?>"><?php if($pceLBlackText): ?><?= $this->lab_pce_l ?><?php endif; ?></div>
