@@ -2,75 +2,75 @@
   "products": [
     {
       "id": 246,
-      "name": "Weizen 400 DK"
+      "name": "Weizenmalzmehl, aktiv"
     },
     {
       "id": 252,
-      "name": "Gerste 300 DK"
+      "name": "Gerstenmalzmehl, aktiv"
     },
     {
       "id": 253,
-      "name": "Aromamalzmehl Gerste 10"
+      "name": "Aromamalzmehl Gerste, EBC 10"
     },
     {
       "id": 262,
-      "name": "Dinkel 275 DK"
+      "name": "Dinkelmalzmehl, aktiv"
     },
     {
       "id": 307,
-      "name": "Roggen 120 DK"
+      "name": "Roggenmalzmehl, aktiv"
     },
     {
       "id": 263,
-      "name": " Röstmalzmehl Roggen 650"
+      "name": " Röstmalzmehl Roggen, EBC 650"
     },
     {
       "id": 265,
-      "name": " Röstmalzmehl Gerste 1500"
+      "name": " Röstmalzmehl Gerste, EBC 1500"
     },
     {
       "id": 304,
-      "name": " Röstmalzmehl Gerste 1000"
+      "name": " Röstmalzmehl Gerste, EBC 1000"
     },
     {
       "id": 305,
-      "name": " Röstmalzmehl Gerste 1400"
+      "name": " Röstmalzmehl Gerste, EBC 1400"
     },
     {
       "id": 306,
-      "name": " Röstmalzmehl Gerste 1600"
+      "name": " Röstmalzmehl Gerste, EBC 1600"
     },
     {
       "id": 285,
-      "name": "Aromamalzmehl Gerste 30"
+      "name": "Aromamalzmehl Gerste, EBC 30"
     },
     {
       "id": 286,
-      "name": "Aromamalzmehl Gerste 100"
+      "name": "Aromamalzmehl Gerste, EBC 100"
     },
     {
       "id": 287,
-      "name": "Aromamalzmehl Gerste 80"
+      "name": "Aromamalzmehl Gerste, EBC 80"
     },
     {
       "id": 288,
-      "name": "Aromamalzmehl Weizen 40"
+      "name": "Aromamalzmehl Weizen, EBC 40"
     },
     {
       "id": 289,
-      "name": "Aromamalzmehl Weizen 100"
+      "name": "Aromamalzmehl Weizen, EBC 100"
     },
     {
       "id": 290,
-      "name": "Aromamalzmehl Gerste 300"
+      "name": "Aromamalzmehl Gerste, EBC 300"
     },
     {
       "id": 291,
-      "name": "Aromamalzmehl Gerste 500"
+      "name": "Aromamalzmehl Gerste, EBC 500"
     },
     {
       "id": 292,
-      "name": "Aromamalzmehl Roggen 135"
+      "name": "Aromamalzmehl Roggen, EBC 135"
     },
     {
       "id": 294,
@@ -78,27 +78,27 @@
     },
     {
       "id": 296,
-      "name": "Aromamalzmehl Roggen 350"
+      "name": "Aromamalzmehl Roggen, EBC 350"
     },
     {
       "id": 297,
-      "name": "Aromamalzmehl Weizen 500"
+      "name": "Aromamalzmehl Weizen, EBC 500"
     },
     {
       "id": 299,
-      "name": "Röstmalzmehl Weizen 1200"
+      "name": "Röstmalzmehl Weizen, EBC 1200"
     },
     {
       "id": 301,
-      "name": "Weizen"
+      "name": "Weizenmalzflocken"
     },
     {
       "id": 302,
-      "name": "Roggen"
+      "name": "Roggenmalzflocken"
     },
     {
       "id": 303,
-      "name": "Dinkel"
+      "name": "Dinkelmalzflocken"
     }
   ]
 }

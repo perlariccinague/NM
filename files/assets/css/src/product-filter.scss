@@ -109,23 +109,19 @@
 #product-finder-article .product.ce_accordion.invisible-product {
   opacity: 0;
   display: none;
-  transition: opacity 500ms;
 }
 
 #product-finder-article .product.ce_accordion.visible-product {
   opacity: 1;
   display: block;
-  transition: opacity 500ms;
 }
 
 #product-finder-article .product.ce_accordion.fading-in-product {
   opacity: 1;
-  transition: opacity 500ms;
 }
 
 #product-finder-article .product.ce_accordion.fading-out-product {
   opacity: 0;
-  transition: opacity 500ms;
 }
 
 #product-finder-article1 {
@@ -183,23 +179,6 @@ body.product-finder #header {
   transition: opacity 150ms;
 }
 
-#question.fading-in-question {
-  opacity: 1;
-  transition: opacity 100ms;
-}
-#question.fading-out-question {
-  opacity: 0;
-  transition: opacity 100ms;
-}
-
-.answers.fading-in-question {
-  opacity: 1;
-  transition: opacity 100ms;
-}
-.answers.fading-out-question {
-  opacity: 0;
-  transition: opacity 100ms;
-}
 
 @media screen and (max-width: 760px) {
   #self-test {

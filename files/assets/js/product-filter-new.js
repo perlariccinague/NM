@@ -37,6 +37,7 @@ const showProducts = (products) => {
                  /!*   fadeIn(product, 300);*!/
                 }
             }, 300);*/
+            console.log(product);
             if(products.includes(parseInt(product.id))) {
                 fadeOutAndIn(product, 300);
             } else {
@@ -90,18 +91,17 @@ const startFilter = (data) => {
             if(questionId === id ) {
 
                 let hasProduct = false;
-              /*  fadeOut(questionContainer, 100)*/
-             /*   questionContainer.innerHTML = question.question;*/
-                fadeOutAndIn(questionContainer, 2000)
-                questionContainer.innerHTML = question.question;
+                fadeOut(questionContainer, 200);
+                setTimeout(() => {
+                    questionContainer.innerHTML = question.question;
+                    fadeIn(questionContainer, 200)
+                }, 200);
 
                 previousId = question.previousId;
                 hasProduct = question.products;
-                if(allAnswers.length > 0) {
-                    allAnswers.forEach(child => child.remove())
-                }
 
                 if(hasProduct) {
+                    allAnswers.forEach(child => child.remove());
                     showProducts(question.products);
                     contactButton.classList.remove('invisible');
                 } else {
@@ -124,9 +124,14 @@ const startFilter = (data) => {
                             backButton.classList.remove('invisible');
                         })
 
-                        fadeOut(answerContainer, 2000)
-                        answerContainer.appendChild(button);
-                        fadeOutAndIn(answerContainer, 2000);
+                        fadeOut(answerContainer, 200)
+                        setTimeout(() => {
+                            if(allAnswers.length > 0) {
+                                allAnswers.forEach(child => child.remove())
+                            }
+                            answerContainer.appendChild(button);
+                            fadeIn(answerContainer, 200);
+                        }, 200);
                     })
                 }
 
