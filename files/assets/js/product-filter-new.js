@@ -37,7 +37,6 @@ const showProducts = (products) => {
                  /!*   fadeIn(product, 300);*!/
                 }
             }, 300);*/
-            console.log(product);
             if(products.includes(parseInt(product.id))) {
                 fadeOutAndIn(product, 300);
             } else {
@@ -99,14 +98,16 @@ const startFilter = (data) => {
 
                 previousId = question.previousId;
                 hasProduct = question.products;
-
+                    if(allAnswers.length > 0) {
+                        allAnswers.forEach(child => child.remove())
+                        console.log(allAnswers);
+                    }
                 if(hasProduct) {
-                    allAnswers.forEach(child => child.remove());
+                  /*  allAnswers.forEach(child => child.remove());*/
                     showProducts(question.products);
                     contactButton.classList.remove('invisible');
                 } else {
                     question.answers.forEach(answer => {
-
                         if(!hasProduct) {
                             findAllRelatedProducts(data, answer);
                             allProductsToShow.forEach((c) => {
@@ -123,15 +124,18 @@ const startFilter = (data) => {
                             showCurrentQuestion(answer.target);
                             backButton.classList.remove('invisible');
                         })
-
                         fadeOut(answerContainer, 200)
                         setTimeout(() => {
-                            if(allAnswers.length > 0) {
+
                                 allAnswers.forEach(child => child.remove())
-                            }
+
                             answerContainer.appendChild(button);
+                            console.log(answerContainer.appendChild(button))
                             fadeIn(answerContainer, 200);
                         }, 200);
+
+                       /* answerContainer.appendChild(button);*/
+                       /* console.log(answerContainer.appendChild(button))*/
                     })
                 }
 
