@@ -21,22 +21,7 @@ contactButton.classList.add('invisible');
 
 const showProducts = (products) => {
     if(products.length > 0) {
-        allProductElements.forEach(product => {/*
-            product.classList.add('fading-out-product');
-            product.classList.remove('visible-product');
-            setTimeout(() => {
-                product.classList.remove('fading-out-product');
-                product.classList.add('invisible-product');
-                if(products.includes(parseInt(product.id))) {
-                    product.classList.add('fading-in-product')
-                    product.classList.remove('invisible-product');
-                    setTimeout(() => {
-                        product.classList.remove('fading-in-product');
-                        product.classList.add('visible-product');
-                    },300)
-                 /!*   fadeIn(product, 300);*!/
-                }
-            }, 300);*/
+        allProductElements.forEach(product => {
             if(products.includes(parseInt(product.id))) {
                 fadeOutAndIn(product, 300);
             } else {
@@ -56,7 +41,7 @@ const showProducts = (products) => {
                         reload.classList.add('invisible-reload');
                     },200)
 
-                }, 300);
+                }, 200);
             }
         })
     }
@@ -100,10 +85,9 @@ const startFilter = (data) => {
                 hasProduct = question.products;
                     if(allAnswers.length > 0) {
                         allAnswers.forEach(child => child.remove())
-                        console.log(allAnswers);
                     }
                 if(hasProduct) {
-                  /*  allAnswers.forEach(child => child.remove());*/
+                    fadeOut(answerContainer, 200);
                     showProducts(question.products);
                     contactButton.classList.remove('invisible');
                 } else {
@@ -130,12 +114,8 @@ const startFilter = (data) => {
                                 allAnswers.forEach(child => child.remove())
 
                             answerContainer.appendChild(button);
-                            console.log(answerContainer.appendChild(button))
                             fadeIn(answerContainer, 200);
                         }, 200);
-
-                       /* answerContainer.appendChild(button);*/
-                       /* console.log(answerContainer.appendChild(button))*/
                     })
                 }
 
