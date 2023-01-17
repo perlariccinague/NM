@@ -89,7 +89,7 @@
       width: 100px;
       text-align: center;
       padding: 10px 12px;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.44);
       border: 1px solid #f8a800c9;
       border-radius: 5px;
       cursor: pointer;
@@ -100,7 +100,7 @@
       font-size: 15px;
       transition: background-color 250ms;
       &:hover {
-        background-color: rgba(255,255,255,.2);
+        background-color: rgb(207, 164, 62);
       }
     }
   }

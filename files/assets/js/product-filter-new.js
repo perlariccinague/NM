@@ -1,5 +1,3 @@
-import 'fade';
-
 const allProductElements = document.querySelectorAll('.product');
 const questionContainer = document.getElementById('question');
 const answerContainer = document.querySelector('.answers');
@@ -23,10 +21,10 @@ contactButton.classList.add('invisible');
 
 const showProducts = (products) => {
     if(products.length > 0) {
-        allProductElements.forEach(product => {
+        allProductElements.forEach(product => {/*
             product.classList.add('fading-out-product');
             product.classList.remove('visible-product');
-            /*setTimeout(() => {
+            setTimeout(() => {
                 product.classList.remove('fading-out-product');
                 product.classList.add('invisible-product');
                 if(products.includes(parseInt(product.id))) {
@@ -36,11 +34,18 @@ const showProducts = (products) => {
                         product.classList.remove('fading-in-product');
                         product.classList.add('visible-product');
                     },300)
+                 /!*   fadeIn(product, 300);*!/
                 }
             }, 300);*/
-            fade(product,300);
+            if(products.includes(parseInt(product.id))) {
+                fadeOutAndIn(product, 300);
+            } else {
+                fadeOut(product, 300);
+            }
 
-            if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product")) {
+
+           /* if(product.classList.contains("fading-out-product") || product.classList.contains("fading-in-product"))*/
+            if(product.style.opacity === '0' || product.style.opacity === '1' ){
                 reload.classList.add('fading-in-reload');
                 reload.classList.remove('invisible-reload');
                 setTimeout(() => {
@@ -85,15 +90,11 @@ const startFilter = (data) => {
             if(questionId === id ) {
 
                 let hasProduct = false;
-                questionContainer.classList.add('fading-out-question');
-                setTimeout(() => {
-                    questionContainer.innerHTML = question.question;
-                    questionContainer.classList.add('fading-in-question');
-                    questionContainer.classList.remove('fading-out-question');
-                    setTimeout(() => {
-                        questionContainer.classList.remove('fading-in-question');
-                    }, 100)
-                }, 100)
+              /*  fadeOut(questionContainer, 100)*/
+             /*   questionContainer.innerHTML = question.question;*/
+                fadeOutAndIn(questionContainer, 2000)
+                questionContainer.innerHTML = question.question;
+
                 previousId = question.previousId;
                 hasProduct = question.products;
                 if(allAnswers.length > 0) {
@@ -122,17 +123,10 @@ const startFilter = (data) => {
                             showCurrentQuestion(answer.target);
                             backButton.classList.remove('invisible');
                         })
-                        answerContainer.classList.add('fading-out-question');
-                        setTimeout(() => {
-                            answerContainer.appendChild(button);
-                            answerContainer.classList.add('fading-in-question');
-                            answerContainer.classList.remove('fading-out-question');
-                            setTimeout(() => {
-                                answerContainer.classList.remove('fading-in-question');
-                            }, 100)
-                        }, 100)
-                       /* answerContainer.appendChild(button);*/
-                        console.log(answerContainer.appendChild(button).innerHTML);
+
+                        fadeOut(answerContainer, 2000)
+                        answerContainer.appendChild(button);
+                        fadeOutAndIn(answerContainer, 2000);
                     })
                 }
 
