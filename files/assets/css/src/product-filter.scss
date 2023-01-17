@@ -188,6 +188,11 @@ body.product-finder #header {
   transition: opacity 150ms;
 }
 
+.answer-placeholder {
+  height: 87px;
+  width: 100%;
+}
+
 
 @media screen and (max-width: 760px) {
   #self-test {

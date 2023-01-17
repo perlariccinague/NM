@@ -1,7 +1,8 @@
+const placeholder = document.querySelector('.answer-placeholder');
 const allProductElements = document.querySelectorAll('.product');
+const contactButton = document.querySelector('.contact-button');
 const questionContainer = document.getElementById('question');
 const answerContainer = document.querySelector('.answers');
-const contactButton = document.querySelector('.contact-button');
 const backButton = document.querySelector('.back-button');
 const reload = document.querySelector('.reload');
 const questionsUrl = 'files/assets/js/questions.json';
@@ -15,9 +16,9 @@ let allProducts;
 let questionId;
 let targetId;
 
-
-backButton.classList.add('invisible');
-contactButton.classList.add('invisible');
+backButton.style.display = 'none';
+contactButton.style.display = 'none';
+placeholder.style.display = 'none';
 
 const showProducts = (products) => {
     if(products.length > 0) {
@@ -88,31 +89,34 @@ const startFilter = (data) => {
                     }
                 if(hasProduct) {
                     fadeOut(answerContainer, 200);
+                    setTimeout(() => {
+                        placeholder.style.display = 'block';
+                    }, 200);
+                    fadeOutAndIn(contactButton, 200);
                     showProducts(question.products);
-                    contactButton.classList.remove('invisible');
+                    fadeOutAndIn(backButton, 200);
                 } else {
+                    setTimeout(() => {
+                        placeholder.style.display = 'none';
+                    },200);
                     question.answers.forEach(answer => {
-                        if(!hasProduct) {
-                            findAllRelatedProducts(data, answer);
-                            allProductsToShow.forEach((c) => {
-                                if (!allProductsToShowClean.includes(c)) {
-                                    allProductsToShowClean.push(c);
-                                }
-                            });
-                        }
+                        findAllRelatedProducts(data, answer);
+                        allProductsToShow.forEach((c) => {
+                            if (!allProductsToShowClean.includes(c)) {
+                                allProductsToShowClean.push(c);
+                            }
+                        });
 
                         const button = document.createElement('div');
                         button.innerHTML = answer.text;
                         button.addEventListener('click', function() {
                             allProductsToShowClean = [];
                             showCurrentQuestion(answer.target);
-                            backButton.classList.remove('invisible');
+                            fadeOutAndIn(backButton, 200);
                         })
                         fadeOut(answerContainer, 200)
                         setTimeout(() => {
-
-                                allAnswers.forEach(child => child.remove())
-
+                            allAnswers.forEach(child => child.remove());
                             answerContainer.appendChild(button);
                             fadeIn(answerContainer, 200);
                         }, 200);
@@ -127,19 +131,26 @@ const startFilter = (data) => {
 
     backButton.addEventListener('click', () => {
         showCurrentQuestion(previousId);
-        contactButton.classList.add('invisible');
+        fadeOut(contactButton, 200);
+        setTimeout(() => {
+            placeholder.style.display = 'none';
+        }, 200);
         if(previousId === 0) {
-            backButton.classList.add('invisible');
+            fadeOut(backButton, 200);
         }
     })
 
     contactButton.addEventListener('click', () => {
         let allNames = [];
+        console.log(allNames);
         allProducts.forEach(product => {
             if(allProductsToShowClean.includes(product.id)) {
                 allNames.push(product.name);
+                console.log('Found Product, pushing ID to array');
             }
         })
+        console.log('After forEach: ');
+        console.log(allNames);
         window.location.href = `mailto:c.koenig@bindewald.de?subject=Anfrage zu ${allNames}`
     })
 
