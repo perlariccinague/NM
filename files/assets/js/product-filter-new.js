@@ -7,6 +7,7 @@ const backButton = document.querySelector('.back-button');
 const reload = document.querySelector('.reload');
 const questionsUrl = 'files/assets/js/questions.json';
 const productsUrl = 'files/assets/js/products.json';
+let allProductsToShowCleanStorage;
 let allProductsToShowClean = [];
 let allProductsToShow = [];
 let relatedProducts = [];
@@ -15,6 +16,7 @@ let previousId = 0;
 let allProducts;
 let questionId;
 let targetId;
+
 
 backButton.style.display = 'none';
 contactButton.style.display = 'none';
@@ -88,6 +90,7 @@ const startFilter = (data) => {
                         allAnswers.forEach(child => child.remove())
                     }
                 if(hasProduct) {
+                    allProductsToShowClean = question.products;
                     fadeOut(answerContainer, 200);
                     setTimeout(() => {
                         placeholder.style.display = 'block';
@@ -124,9 +127,12 @@ const startFilter = (data) => {
                 }
 
                 showProducts(allProductsToShowClean);
+                allProductsToShowCleanStorage = allProductsToShowClean;
+                /*console.log(allProductsToShowCleanStorage)*/
                 allAnswers = document.querySelectorAll('.answers div');
             }
         })
+
     }
 
     backButton.addEventListener('click', () => {
@@ -139,19 +145,15 @@ const startFilter = (data) => {
             fadeOut(backButton, 200);
         }
     })
-
     contactButton.addEventListener('click', () => {
         let allNames = [];
-        console.log(allNames);
+        console.log(allNames)
         allProducts.forEach(product => {
             if(allProductsToShowClean.includes(product.id)) {
-                allNames.push(product.name);
-                console.log('Found Product, pushing ID to array');
+                allNames.push( product.name);
             }
         })
-        console.log('After forEach: ');
-        console.log(allNames);
-        window.location.href = `mailto:c.koenig@bindewald.de?subject=Anfrage zu ${allNames}`
+        window.location.href = `mailto:c.koenig@bindewald.de?subject=Anfrage zu ${allNames.join(', ')}`
     })
 
     showCurrentQuestion(1);

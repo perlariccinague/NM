@@ -85,7 +85,7 @@
       text-transform: uppercase;
       font-weight: bold;
       font-size: 15px;
-      transition: background-color 250ms;
+      /*transition: background-color 250ms;*/
       &:hover {
         background-color: #c69b43;
       }
@@ -191,6 +191,37 @@ body.product-finder #header {
 .answer-placeholder {
   height: 87px;
   width: 100%;
+}
+
+/*.to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  display: none;
+}*/
+
+#progress {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+}
+#progress-value {
+  height: calc(100% - 5px);
+  width: calc(100% - 5px);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  color: #f8a800;
 }
 
 
