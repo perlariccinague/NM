@@ -300,6 +300,13 @@
   margin: 0 auto;
 }
 
+.mod_newsreader .layout_full > * {
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 @media screen and (max-width: 760px) {
   .teaser-news h2, .teaser-main h2 {
