@@ -320,9 +320,7 @@
   width: 90%;
   .ce_image.block {
     width: 14%;
-    cursor: pointer;
-    /*align-items: center;
-    display: flex;*/
+    /*cursor: pointer;*/
     border: 2px solid gray;
     border-radius: 11px;
   }
@@ -330,7 +328,7 @@
     align-items: center;
     display: flex;
     justify-content: space-around;
-    a {
+   /* a {
       img {
         width: 115px;
         transition: transform 250ms;
@@ -338,6 +336,9 @@
           transform: scale(1.1);
         }
       }
+    }*/
+    img {
+      width: 120px;
     }
   }
 }

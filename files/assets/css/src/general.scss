@@ -35,6 +35,15 @@ ul {
   padding: 0;
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 250ms;
+  &:hover {
+    color: $yellow;
+  }
+}
+
 
 @import "footer";
 @import "header";
