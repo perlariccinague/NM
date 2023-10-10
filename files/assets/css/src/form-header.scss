@@ -36,7 +36,7 @@ input.search_input::placeholder {
   margin-right: 40px;
   border-style: none;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 900;
   outline: none;
   cursor: pointer;
   border-radius: 50%;
@@ -115,7 +115,7 @@ input.search_input:focus {
   a {
     text-decoration: none;
     color: $gray;
-    font-weight: normal;
+    font-weight: 400;
     transition: color 250ms;
     cursor: pointer;
     &:hover {

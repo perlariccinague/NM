@@ -34,12 +34,12 @@
   h2 {
     border-bottom-style: dotted;
     padding-bottom: 20px;
-    font-weight: bold;
+    font-weight: 900;
     letter-spacing: 1px;
     margin-top: 50px;
     text-transform: uppercase;
     font-size: 30px;
-  strong {
+  .span-h2 {
     margin-left: 157px;
     &:before {
       background: url("/files/assets/layout/arrow-right-black.svg") no-repeat;
@@ -52,6 +52,16 @@
       position: absolute;
     }
   }
+   /* &:before {
+      background: url("/files/assets/layout/arrow-right-black.svg") no-repeat;
+      content: "";
+      float: left;
+      margin: 5px 0 0 -45px;
+      background-size: contain;
+      height: 28px;
+      width: 30px;
+      position: absolute;
+    }*/
   }
   p {
     font-size: 20px;
@@ -102,7 +112,7 @@
   }
 }
 
-.standort .teaser-news strong {
+.standort .teaser-news .span-h2 {
   &:before {
     background: url("/files/assets/layout/Arrow-right-yellow.svg") no-repeat;
 
@@ -197,7 +207,7 @@
   margin: 30px 0;
   border-bottom-style: dotted;
   padding-bottom: 20px;
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -385,7 +395,7 @@
 @media screen and (max-width: 760px) {
   .teaser-news h2, .teaser-main h2 {
     font-size: 16px;
-    strong {
+   .span-h2 {
       margin-left: 61px;
       &:before {
         margin: 0px 0 0 -30px;
@@ -394,7 +404,7 @@
     }
   }
 
-  .standort .teaser-news strong::before {
+  .standort .teaser-news .span-h2::before {
     background-size: 18px;
   }
 
