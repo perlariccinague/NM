@@ -1,27 +1,3 @@
- /*let toTopButton = document.querySelector('.to-top-button');
- console.log(toTopButton);
-
- window.onscroll = function() {
-  scroll()
- };
-
- const scroll = () => {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-   toTopButton.style.display = "block";
-  } else {
-   toTopButton.style.display = "none";
-  }
- }
-
- toTopButton.addEventListener('click', () => {
-  document.querySelector('body,html').getBoundingClientRect().top;
-  window.scrollTo({
-   behavior: 'smooth',
-   top: scroll,
-  });
- })*/
-
-
  let calcScrollValue = () => {
      let toTopButton = document.getElementById("progress");
      let topValue = document.documentElement.scrollTop;

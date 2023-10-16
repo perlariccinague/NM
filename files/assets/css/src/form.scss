@@ -17,7 +17,7 @@
 .contact-form .formbody input[name="E-Mail"],
 .contact-form .formbody input[name="Telefon"]{
   background-color: black;
-  border: 0px;
+  border: 0;
   color: white;
   width: 50%;
   font-size: 15px;
@@ -58,7 +58,7 @@ button.contact-button, #filter .submit, #filter .reset {
   background: transparent;
   border: 1px solid $yellow;
   padding: 6px 45px;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
   font-size: 15px;
   transition: background-color 250ms;
@@ -78,7 +78,7 @@ button.contact-button, #filter .submit, #filter .reset {
     margin: 30px 0;
     border-bottom-style: dotted;
     padding-bottom: 20px;
-    font-weight: bold;
+    font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
