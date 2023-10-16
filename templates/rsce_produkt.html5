@@ -82,6 +82,9 @@
         <h2> <?= $this->product_title  ?></h2>
         <div class="product_description_block">
             <?= $this->description  ?>
+            <?php if(!$this->description): ?>
+                <p><?= $this->product_title ?></p>
+            <?php endif; ?>
             <img src="/files/assets/layout/Brot.svg" alt="">
         </div>
 

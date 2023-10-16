@@ -222,6 +222,10 @@ body.product-finder #header {
   place-items: center;
   font-size: 25px;
   color: #f8a800;
+  transition: background-color 250ms;
+  &:hover {
+    background-color: #fde4b4;
+  }
 }
 
 
