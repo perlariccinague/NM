@@ -110,6 +110,87 @@ button.contact-button, #filter .submit, #filter .reset {
   background-color: $yellow;
 }
 
+.feedback-form {
+  width: 90%;
+  max-width: $max-width;
+  margin: 0 auto;
+  .formbody {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+    .widget-radio {
+      fieldset {
+        margin: 20px 0;
+        legend {
+          font-weight: bold;
+          color: $yellow;
+        }
+        > span {
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+          cursor: pointer;
+          label {
+            cursor: pointer;
+          }
+          input {
+            &:checked {
+              display: none;
+            }
+            &:checked+label {
+              position: relative;
+              padding-left: 26px;
+              &:before {
+                position: absolute;
+                top: 8px;
+                left: 4px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                content: '';
+                background-color: $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget-textarea,.widget-text {
+      margin: 20px 0;
+      label {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-weight: bold;
+        color: $yellow;
+      }
+      input,textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 8px 10px;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Barlow', sans-serif;
+      }
+    }
+    .widget-submit button {
+      border-radius: 5px;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      background: #f59f15;
+      border: 0;
+      margin: 25px 0;
+    }
+  }
+}
+
+
 @media screen and (max-width: 760px) {
   .contact-form {
     width: 100%;
