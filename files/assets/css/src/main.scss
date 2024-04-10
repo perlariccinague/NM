@@ -104,6 +104,15 @@
   margin-left: 118px;
 }
 
+.image-container .image_container {
+  margin-left: 0;
+}
+
+.zertifizierung {
+  padding: 40px 0 80px;
+}
+
+
 .standort {
   background: $gray ;
   h2 {
@@ -248,27 +257,34 @@
   justify-content: space-between;
   flex-wrap: wrap;
   .news {
-    width: 30%;
+    width: 32%;
     .image_container.float_above {
       margin-top: 20px;
+      img {
+        width: 100%;
+        height: 228px;
+        object-fit: cover;
+      }
     }
-    h2 a {
+    h2 {
       display: none;
+      a {
+        display: none;
+      }
     }
     .ce_text {
       line-height: 1.6em;
       font-size: 15px;
       color: white;
+      height: 205px;
       .h2-span, .h2-span1 {
         padding: 0 7px;
         background: #000;
         line-height: 1.3em;
       }
-      .h2-span1 {
-
-      }
-      .h2-span {
-
+      h2 {
+        height: 60px;
+        display: block;
       }
       p {
         font-size: 20px;
@@ -391,6 +407,98 @@
   max-width: 1000px;
   margin: 30px auto;
 }
+
+.text-button {
+  font-size: 20px;
+  color: #f69e0c;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.bg-yellow {
+  background: #f8a800;
+  margin-top: 80px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 10;
+  .teaser-main {
+    p {
+      color: white;
+      &:before {
+        background: url("/files/assets/layout/logo-white.svg") no-repeat;
+      }
+    }
+  }
+}
+
+.button {
+  p {
+    text-align: center;
+    display: inline-block;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    a {
+      background: #000;
+      color: white;
+      padding: 10px 26px;
+      font-size: 22px;
+      transition: background-color 250ms;
+      &:hover{
+        background-color: #f69e0c;
+      }
+    }
+  }
+}
+
+#value .teaser-main {
+  &:first-child {
+    p:before{
+      display: none;
+    }
+  }
+}
+
+.quality {
+  position: absolute;
+  transform: translate(-50%, -25px);
+  left: 50%;
+  z-index: 15;
+  .button {
+    padding-top: 10px;
+    p {
+      margin-top: 0;
+      a:hover {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+
+#produkte1 {
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+.kontakt.team {
+  .kontakt-image {
+    .image_container {
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+#production {
+  padding-bottom: 50px;
+}
+
+
 
 @media screen and (max-width: 760px) {
   .teaser-news h2, .teaser-main h2 {

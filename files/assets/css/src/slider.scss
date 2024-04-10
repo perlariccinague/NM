@@ -159,11 +159,16 @@
     right: 3%;
   }
   .slider-prev, .slider-next {
-    box-shadow: 0 0 15px #f69e0c;
+   /* box-shadow: 0 0 15px #f69e0c;*/
     border-radius: 50%;
-    width: 45px
+    width: 45px;
+    img {
+      box-shadow: 0 0 10px #f69e0c;
+      border-radius: 50%;
+    }
   }
 }
+
 
 .slider-news .slider-control a, .ce_sliderStart .slider-control a{
   transition: filter 250ms;
