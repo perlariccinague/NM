@@ -23,9 +23,10 @@
   width: 50%;
   font-size: 15px;
   cursor: pointer;
-  padding: 5px 5px;
+  padding: 10px 10px;
   outline: none;
 }
+
 
 fieldset {
   border: 0;
@@ -83,8 +84,8 @@ button.contact-button, #filter .submit, #filter .reset {
   cursor: pointer;
   color: black;
   background: transparent;
-  border: 1px solid $yellow;
-  padding: 6px 45px;
+  border: 2px solid #f8a800;
+  padding: 12px 45px;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 15px;

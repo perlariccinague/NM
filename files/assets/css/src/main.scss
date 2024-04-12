@@ -159,22 +159,34 @@
     max-width: 300px;
     cursor: pointer;
   .kontakt-image {
-    img {
-      width: 216px;
-      transition: transform 250ms ease-out;
-      &:hover {
-        transform: scale(1.1);
+    .image_container {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 216px;
+        transition: transform 250ms ease-out;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
    }
-    .kontakt-image-scan img {
-      width: 230px;
+    .kontakt-image-scan {
+      .image_container {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 230px;
+        }
+      }
     }
   }
 }
 
+
 .kontakt-image h3 {
-  margin-left: 35px;
+  /*margin-left: 35px;*/
+  text-align: center;
   font-size: 20px;
   cursor: default;
   strong:before {
@@ -191,7 +203,7 @@
 
 .kontakt-image p {
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   a {
     text-decoration: none;
     color: #3c3c43;
@@ -201,6 +213,7 @@
     }
   }
 }
+
 
 .text-only {
   width: 90%;
@@ -490,14 +503,47 @@
     }
     p {
       text-align: center;
+      font-size: 18px;
     }
   }
 }
+
 
 #production {
   padding-bottom: 50px;
 }
 
+.ce_image.image-collage {
+  display: block;
+  max-width: 1500px;
+  margin: 40px auto;
+}
+
+#contact-product .ansprechpartner-box {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 60px;
+  .ce_text.kontakt-image {
+    .image_container {
+      display: flex;
+      justify-content: center;
+    }
+    h3 {
+      text-align: center;
+      margin-right: 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .kontakt-image-scan {
+    .image_container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
 
 
 @media screen and (max-width: 760px) {
@@ -506,7 +552,7 @@
    .span-h2 {
       margin-left: 61px;
       &:before {
-        margin: 0px 0 0 -30px;
+        margin: 0 0 0 -30px;
         background-size: 18px;
       }
     }
