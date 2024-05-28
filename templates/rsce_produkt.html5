@@ -1,6 +1,6 @@
 <?php
     $ebc = $this->ebc;
-    $ebcPercentage = $ebc/1600;
+    $ebcPercentage = intval($ebc)/1600;
     $ebcWhiteText = false;
     $pceLBlackText = false;
     if($ebcPercentage >= 0.6) {
@@ -8,18 +8,18 @@
     }
     $pceL = $this->lab_pce_l;
 
-    $pceLBase = $pceL - 23.4;
-    $pceLPercentage = $pceLBase/59.9;
+    $pceLBase = floatval($pceL) - 23.4;
+    $pceLPercentage = floatval($pceLBase) / 59.9;
 
     if($pceLPercentage >= 0.6) {
         $pceLBlackText = true;
     }
     $pceA = $this->lab_pce_a;
-    $pceABase = $pceA - 3.7;
-    $pceAPercentage = $pceABase/10;
+    $pceABase = floatval($pceA) - 3.7;
+    $pceAPercentage = floatval($pceABase)/10;
     $pceB = $this->lab_pce_b;
-    $pceBBase = $pceB - 10.2;
-    $pceBPercentage = $pceBBase/27.7;
+    $pceBBase = floatval($pceB) - 10.2;
+    $pceBPercentage = floatval($pceBBase)/27.7;
     $wheat = false;
     $rye = false;
     $spelt = false;

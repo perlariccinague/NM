@@ -4,7 +4,7 @@
     </div>
     <div class="header-banner-right">
         <div class="header-banner-top-right">
-            {{insert_module::3}}
+            {{iflng::de}}{{insert_module::3}}{{iflng::en}}{{insert_module::22}}{{iflng}} <!-- Header bzw. Header EN -->
             {{insert_module::19}}
         </div>
         <div class="header-banner-bottom-right">

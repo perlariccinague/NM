@@ -1,4 +1,4 @@
-<div class="menu-inside">
+<div class="menu-inside bla">
     <div class="header-banner">
     <div class="header-banner-top">
         {{insert_content::50}}
@@ -23,7 +23,7 @@
 <nav class="mod_navigation">
     <ul class="menu-list">
         <li>
-           {{insert_module::15}}
+            {{iflng::de}}{{insert_module::15}}{{iflng::en}}{{insert_module::29}}{{iflng}}
         </li>
     </ul>
 </nav>
